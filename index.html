@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>CanaDrive Autos and Parts Inc. | Cash for Junk & Scrap Cars (GTA)</title>
+  <meta name="description" content="CanaDrive Autos and Parts Inc. buys junk, scrap, damaged, unwanted, and end-of-life vehicles across the GTA. Fast quote, free pickup, cash paid. Call now." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CanaDrive Autos and Parts Inc. | Cash for Junk & Scrap Cars (GTA)" />
+  <meta property="og:description" content="Get a fast quote. We buy junk, scrap, damaged, unwanted & end-of-life vehicles across the GTA. Free pickup. Cash paid." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_CA" />
+
+  <!-- Replace with your domain -->
+  <link rel="canonical" href="https://canadrive.co/" />
+
+  <style>
+    :root{
+      --bg:#070b14;
+      --panel:#0b1220;
+      --panel2:#0f1a33;
+      --text:#e8eefc;
+      --muted:#a8b4d6;
+      --line:rgba(232,238,252,.10);
+      --accent:#ff2d2d; /* Canadian red */
+      --accent2:#ff9a3d;
+      --good:#38f6a3;
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1160px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 700px at 70% -10%, rgba(255,45,45,.18), transparent 55%),
+                  radial-gradient(900px 600px at 10% 10%, rgba(255,154,61,.12), transparent 50%),
+                  radial-gradient(900px 600px at 70% 70%, rgba(56,246,163,.10), transparent 55%),
+                  linear-gradient(180deg, #050813 0%, #070b14 50%, #050813 100%);
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    a{color:inherit; text-decoration:none}
+    .container{width:min(var(--max), calc(100% - 40px)); margin:0 auto}
+
+    /* subtle animated grid */
+    .grid{
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      opacity:.22;
+      background-image:
+        linear-gradient(to right, rgba(232,238,252,.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(232,238,252,.05) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(500px 500px at var(--mx,50%) var(--my,25%), #000 30%, transparent 70%);
+      transition: mask-image .2s ease;
+    }
+
+    /* header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,20,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; min-width: 260px;
+    }
+    .logo{
+      width:38px; height:38px; border-radius:12px;
+      background:
+        radial-gradient(120% 120% at 20% 10%, rgba(255,255,255,.30), transparent 40%),
+        linear-gradient(135deg, rgba(255,45,45,.95), rgba(255,154,61,.85));
+      box-shadow: 0 10px 28px rgba(255,45,45,.18);
+      position:relative;
+      overflow:hidden;
+    }
+    .logo:after{
+      content:"";
+      position:absolute; inset:-40%;
+      background: conic-gradient(from 180deg, rgba(255,255,255,.0), rgba(255,255,255,.28), rgba(255,255,255,0));
+      animation: spin 7s linear infinite;
+    }
+    @keyframes spin{ to{ transform: rotate(360deg);} }
+
+    .brand b{font-size:14px; letter-spacing:.2px}
+    .brand span{display:block; font-size:12px; color:var(--muted); margin-top:2px}
+
+    nav ul{list-style:none; display:flex; gap:18px; padding:0; margin:0; align-items:center}
+    nav a{
+      color:var(--muted);
+      font-size:13px;
+      font-weight:600;
+      padding:10px 10px;
+      border-radius:12px;
+      transition: .2s ease;
+    }
+    nav a:hover{color:var(--text); background: rgba(232,238,252,.06)}
+
+    .nav-actions{display:flex; gap:10px; align-items:center}
+    .btn{
+      display:inline-flex; gap:10px; align-items:center; justify-content:center;
+      padding:11px 14px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(232,238,252,.05);
+      color:var(--text);
+      font-size:13px;
+      font-weight:700;
+      transition:.2s ease;
+      cursor:pointer;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(232,238,252,.08)}
+    .btn.primary{
+      border-color: rgba(255,45,45,.35);
+      background: linear-gradient(135deg, rgba(255,45,45,.92), rgba(255,154,61,.85));
+      box-shadow: 0 18px 40px rgba(255,45,45,.18);
+    }
+    .btn.primary:hover{filter: brightness(1.05)}
+    .pill{
+      font-size:12px;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid rgba(56,246,163,.25);
+      background: rgba(56,246,163,.10);
+      color: rgba(210,255,236,.95);
+      font-weight:700;
+    }
+
+    .hamburger{display:none}
+
+    /* hero */
+    .hero{
+      padding: 44px 0 18px;
+      position:relative;
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:28px;
+      align-items:stretch;
+    }
+    .card{
+      border:1px solid var(--line);
+      background: radial-gradient(900px 500px at 20% 0%, rgba(255,45,45,.16), transparent 55%),
+                  radial-gradient(900px 500px at 80% 40%, rgba(255,154,61,.12), transparent 55%),
+                  rgba(11,18,32,.70);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .card:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background: linear-gradient(90deg, rgba(255,45,45,.0), rgba(255,45,45,.25), rgba(255,154,61,.25), rgba(255,45,45,0));
+      opacity:.35;
+      filter: blur(14px);
+      transform: translateX(-35%);
+      animation: sweep 6.5s ease-in-out infinite;
+      pointer-events:none;
+    }
+    @keyframes sweep{
+      0%{transform: translateX(-45%)}
+      50%{transform: translateX(35%)}
+      100%{transform: translateX(-45%)}
+    }
+
+    .hero-left{padding: 34px 32px}
+    .kicker{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+    h1{
+      font-size: clamp(30px, 3.7vw, 54px);
+      line-height: 1.05;
+      margin: 12px 0 12px;
+      letter-spacing: -.02em;
+    }
+    .lead{
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+      margin: 0 0 20px;
+      max-width: 60ch;
+    }
+    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top: 18px}
+    .mini{
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin-top: 18px;
+    }
+    .mini .chip{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px 12px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background: rgba(232,238,252,.04);
+      min-width: 220px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.7), rgba(255,255,255,0) 45%),
+                  linear-gradient(180deg, var(--good), rgba(56,246,163,.35));
+      box-shadow: 0 0 0 6px rgba(56,246,163,.08);
+      margin-top:4px;
+    }
+    .chip b{font-size:13px}
+    .chip p{margin:2px 0 0; font-size:12px; color:var(--muted); line-height:1.35}
+
+    /* quote panel */
+    .quote{padding: 22px; display:flex; flex-direction:column; gap:14px}
+    .quote h2{margin:4px 0 0; font-size:16px}
+    .quote p{margin:0; color:var(--muted); font-size:13px; line-height:1.5}
+
+    .form{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+      margin-top: 6px;
+    }
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+    label{font-size:11px; color:var(--muted); font-weight:700; letter-spacing:.2px}
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid rgba(232,238,252,.12);
+      background: rgba(7,11,20,.45);
+      color:var(--text);
+      outline:none;
+      font-size:13px;
+      transition:.2s ease;
+    }
+    input:focus, select:focus, textarea:focus{
+      border-color: rgba(255,45,45,.35);
+      box-shadow: 0 0 0 5px rgba(255,45,45,.10);
+    }
+    textarea{min-height: 92px; resize: vertical; grid-column: 1 / -1}
+    .form .full{grid-column:1/-1}
+    .form-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top: 4px}
+    .note{
+      font-size:11px;
+      color: rgba(168,180,214,.9);
+    }
+    .note a{color: rgba(255,154,61,.95); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px}
+
+    /* sections */
+    section{padding: 48px 0}
+    .section-title{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:16px;
+      margin-bottom: 18px;
+    }
+    .section-title h3{margin:0; font-size:20px}
+    .section-title p{margin:0; color:var(--muted); font-size:13px; max-width: 75ch}
+
+    .features{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .feature{
+      padding:16px 16px;
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background: rgba(232,238,252,.04);
+      transition:.2s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    .feature:hover{transform: translateY(-2px); background: rgba(232,238,252,.06)}
+    .feature .icon{
+      width:36px; height:36px; border-radius:14px;
+      background: linear-gradient(135deg, rgba(255,45,45,.95), rgba(255,154,61,.85));
+      box-shadow: 0 16px 34px rgba(255,45,45,.16);
+      display:grid; place-items:center;
+      margin-bottom:10px;
+    }
+    .feature b{display:block; font-size:14px; margin-bottom:6px}
+    .feature p{margin:0; color:var(--muted); font-size:13px; line-height:1.55}
+
+    /* steps */
+    .steps{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    .step{
+      padding:18px 16px;
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background: rgba(232,238,252,.04);
+    }
+    .step .num{
+      width:34px; height:34px;
+      border-radius: 14px;
+      display:grid; place-items:center;
+      background: rgba(56,246,163,.12);
+      border:1px solid rgba(56,246,163,.25);
+      color: rgba(210,255,236,.95);
+      font-weight:800;
+      margin-bottom:10px;
+    }
+    .step b{display:block; margin-bottom:6px}
+    .step p{margin:0; color:var(--muted); font-size:13px; line-height:1.55}
+
+    /* service cards */
+    .services{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    .svc{
+      padding:18px 16px;
+      border-radius: var(--radius);
+      border:1px solid var(--line);
+      background:
+        radial-gradient(700px 340px at 20% 0%, rgba(56,246,163,.12), transparent 55%),
+        rgba(232,238,252,.04);
+    }
+    .svc h4{margin:0 0 6px; font-size:15px}
+    .svc ul{margin:10px 0 0; padding-left: 18px; color: var(--muted); font-size:13px; line-height:1.7}
+    .svc li{margin:6px 0}
+
+    /* GTA area list */
+    .areas{
+      display:flex; flex-wrap:wrap; gap:10px; margin-top: 10px;
+    }
+    .areas span{
+      padding:9px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(7,11,20,.35);
+      font-size:12px;
+      color: rgba(232,238,252,.92);
+    }
+
+    /* FAQ */
+    details{
+      border:1px solid var(--line);
+      background: rgba(232,238,252,.04);
+      border-radius: var(--radius);
+      padding:14px 14px;
+    }
+    details + details{margin-top:10px}
+    summary{
+      cursor:pointer;
+      list-style:none;
+      font-weight:800;
+      font-size:13px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    summary::-webkit-details-marker{display:none}
+    .chev{
+      width: 22px; height: 22px; border-radius: 10px;
+      display:grid; place-items:center;
+      border:1px solid var(--line);
+      background: rgba(7,11,20,.35);
+      transition: transform .2s ease;
+      flex: 0 0 auto;
+    }
+    details[open] .chev{transform: rotate(180deg)}
+    details p{margin:10px 0 0; color: var(--muted); font-size:13px; line-height:1.6}
+
+    /* footer */
+    footer{
+      border-top:1px solid var(--line);
+      padding: 28px 0 36px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:14px;
+      align-items:flex-start;
+    }
+    .footer-card{
+      border:1px solid var(--line);
+      background: rgba(232,238,252,.03);
+      border-radius: var(--radius);
+      padding: 16px 16px;
+    }
+    .footer-card b{color: var(--text)}
+    .footer-card p{margin:8px 0 0; line-height:1.6}
+    .footer-links{display:flex; flex-wrap:wrap; gap:10px; margin-top: 12px}
+    .footer-links a{padding:10px 12px; border-radius: 14px; border:1px solid var(--line); background: rgba(7,11,20,.35)}
+    .footer-links a:hover{background: rgba(232,238,252,.06); color: var(--text)}
+    .small{opacity:.9}
+
+    /* floating call bar */
+    .callbar{
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 16px;
+      z-index: 60;
+      width: min(var(--max), calc(100% - 20px));
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      gap:12px;
+      padding: 12px 12px;
+      border-radius: 22px;
+      border: 1px solid rgba(232,238,252,.14);
+      background: rgba(7,11,20,.70);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 60px rgba(0,0,0,.5);
+    }
+    .callbar .left{
+      display:flex; gap:10px; align-items:center;
+    }
+    .pulse{
+      width:10px; height:10px; border-radius:999px;
+      background: var(--good);
+      box-shadow: 0 0 0 0 rgba(56,246,163,.55);
+      animation: pulse 1.6s ease-out infinite;
+    }
+    @keyframes pulse{
+      0%{ box-shadow:0 0 0 0 rgba(56,246,163,.55)}
+      100%{ box-shadow:0 0 0 16px rgba(56,246,163,0)}
+    }
+    .callbar b{font-size:13px}
+    .callbar span{display:block; font-size:12px; color:var(--muted); margin-top:2px}
+    .callbar .right{display:flex; gap:10px; align-items:center}
+
+    /* reveal animation */
+    .reveal{
+      opacity:0;
+      transform: translateY(10px);
+      transition: .7s ease;
+    }
+    .reveal.show{
+      opacity:1;
+      transform: translateY(0);
+    }
+
+    /* responsive */
+    @media (max-width: 980px){
+      nav ul{display:none}
+      .hamburger{
+        display:inline-flex;
+        padding:11px 12px;
+        border-radius:14px;
+        border:1px solid var(--line);
+        background: rgba(232,238,252,.05);
+      }
+      .hero-grid{grid-template-columns: 1fr}
+      .form{grid-template-columns: 1fr}
+      .features{grid-template-columns: 1fr}
+      .steps{grid-template-columns: 1fr}
+      .services{grid-template-columns: 1fr}
+      .footer-grid{grid-template-columns: 1fr}
+      .brand{min-width:auto}
+    }
+  </style>
+
+  <!-- LocalBusiness schema (updated: phone + GTA) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "CanaDrive Autos and Parts Inc.",
+    "url": "https://canadrive.co/",
+    "telephone": "+1-647-222-6661",
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Greater Toronto Area (GTA), Ontario, Canada"
+    },
+    "description": "We buy junk, scrap, damaged, unwanted, and end-of-life vehicles across the GTA. Fast quote and pickup.",
+    "email": "info@canadarive.co"
+  }
+  </script>
+</head>
+
+<body>
+  <div class="grid" aria-hidden="true"></div>
+
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#top">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <b>CanaDrive Autos and Parts Inc.</b>
+            <span>Cash for junk & scrap cars • GTA</span>
+          </div>
+        </a>
+
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#services">What we buy</a></li>
+            <li><a href="#quote">Get a quote</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <span class="pill">GTA pickup</span>
+          <a class="btn" id="btnCallTop" href="tel:+16472226661" aria-label="Call CanaDrive">Call</a>
+          <button class="hamburger" id="menuBtn" aria-label="Open menu">☰</button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobileMenu" style="display:none; padding:0 0 14px;">
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn" href="#how">How it works</a>
+          <a class="btn" href="#services">What we buy</a>
+          <a class="btn" href="#quote">Get a quote</a>
+          <a class="btn" href="#faq">FAQ</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="container">
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="card reveal">
+            <div class="hero-left">
+              <div class="kicker">
+                <span class="pill">Fast quote in minutes</span>
+                <span class="pill" style="border-color:rgba(255,154,61,.25); background:rgba(255,154,61,.10); color:rgba(255,220,200,.98)">Free pickup</span>
+                <span class="pill" style="border-color:rgba(232,238,252,.14); background:rgba(232,238,252,.06); color:rgba(232,238,252,.95)">Cash paid</span>
+              </div>
+
+              <h1>Sell your junk or scrap car in the GTA—quick, simple, and stress-free.</h1>
+              <p class="lead">
+                We buy end-of-life vehicles, scrap cars, damaged cars, and unwanted vehicles across the Greater Toronto Area.
+                Tell us the basics, get a quote, and we arrange pickup.
+              </p>
+
+              <div class="hero-actions">
+                <a class="btn primary" href="#quote">Get an instant quote</a>
+                <a class="btn" id="btnWhatsApp" href="#" rel="noopener">WhatsApp us</a>
+              </div>
+
+              <div class="mini">
+                <div class="chip">
+                  <div class="dot" aria-hidden="true"></div>
+                  <div>
+                    <b>Transparent pricing</b>
+                    <p>We quote based on your vehicle details—no hidden fees.</p>
+                  </div>
+                </div>
+                <div class="chip">
+                  <div class="dot" aria-hidden="true"></div>
+                  <div>
+                    <b>We buy most conditions</b>
+                    <p>Running, not running, mechanical issues, accident damage, rust.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="card reveal" id="quote">
+            <div class="quote">
+              <h2>Get a quick quote</h2>
+              <p>Fill this out and we’ll call/text you with a price. Or call us now at <b>647-222-6661</b>.</p>
+
+              <form class="form" id="quoteForm">
+                <div class="field">
+                  <label for="year">Year</label>
+                  <input id="year" name="year" inputmode="numeric" placeholder="e.g., 2012" required />
+                </div>
+
+                <div class="field">
+                  <label for="make">Make</label>
+                  <input id="make" name="make" placeholder="e.g., Honda" required />
+                </div>
+
+                <div class="field">
+                  <label for="model">Model</label>
+                  <input id="model" name="model" placeholder="e.g., Civic" required />
+                </div>
+
+                <div class="field">
+                  <label for="condition">Condition</label>
+                  <select id="condition" name="condition" required>
+                    <option value="" selected disabled>Select…</option>
+                    <option>Running (minor issues)</option>
+                    <option>Not running</option>
+                    <option>Mechanical issue</option>
+                    <option>Accident / damage</option>
+                    <option>Scrap / end-of-life</option>
+                  </select>
+                </div>
+
+                <div class="field full">
+                  <label for="location">Pickup city / area (GTA)</label>
+                  <input id="location" name="location" placeholder="e.g., Scarborough / Mississauga / Vaughan" required />
+                </div>
+
+                <div class="field">
+                  <label for="name">Your name</label>
+                  <input id="name" name="name" placeholder="Optional" />
+                </div>
+
+                <div class="field">
+                  <label for="phone">Phone</label>
+                  <input id="phone" name="phone" inputmode="tel" placeholder="e.g., 647-555-1234" required />
+                </div>
+
+                <div class="field full">
+                  <label for="notes">Extra details (optional)</label>
+                  <textarea id="notes" name="notes" placeholder="Mileage, rust, missing catalytic converter, alloy rims, etc."></textarea>
+                </div>
+
+                <div class="form-actions full">
+                  <button class="btn primary" type="submit">Send request</button>
+                  <a class="btn" id="btnCallQuote" href="tel:+16472226661">Call instead</a>
+                </div>
+
+                <div class="note full">
+                  By submitting, you agree we may contact you by phone/text about your quote request.
+                  Prefer WhatsApp? Use the button above.
+                </div>
+              </form>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="how">
+        <div class="section-title">
+          <div>
+            <h3>How it works</h3>
+            <p>Simple process designed to get you paid fast and remove the vehicle without hassle.</p>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <div class="num">1</div>
+            <b>Share the vehicle details</b>
+            <p>Year, make/model, condition, and where it’s located in the GTA.</p>
+          </div>
+          <div class="step reveal">
+            <div class="num">2</div>
+            <b>Get a price</b>
+            <p>We provide a clear quote based on your details.</p>
+          </div>
+          <div class="step reveal">
+            <div class="num">3</div>
+            <b>Pickup & payment</b>
+            <p>We arrange pickup and complete the handoff. You get paid.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="section-title">
+          <div>
+            <h3>What we buy</h3>
+            <p>We focus on junk and end-of-life vehicles. If you’re unsure, call or message us and ask.</p>
+            <div class="areas" aria-label="Service areas in GTA">
+              <span>Toronto</span><span>Scarborough</span><span>North York</span><span>Etobicoke</span>
+              <span>Mississauga</span><span>Brampton</span><span>Vaughan</span><span>Markham</span>
+              <span>Richmond Hill</span><span>Pickering</span><span>Ajax</span><span>Whitby</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="services">
+          <div class="svc reveal">
+            <h4>Scrap & end-of-life vehicles</h4>
+            <ul>
+              <li>Non-running or sitting unused</li>
+              <li>Mechanical issues (engine, transmission, etc.)</li>
+              <li>Rusty / high-mileage vehicles</li>
+            </ul>
+          </div>
+          <div class="svc reveal">
+            <h4>Damaged & unwanted cars</h4>
+            <ul>
+              <li>Accident / body damage</li>
+              <li>Unwanted vehicles you want gone</li>
+              <li>Fast communication and clear next steps</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="section-title">
+          <div>
+            <h3>FAQ</h3>
+            <p>Short answers to common questions people ask before calling.</p>
+          </div>
+        </div>
+
+        <details class="reveal">
+          <summary>Do you buy cars that don’t run? <span class="chev">⌄</span></summary>
+          <p>Yes. We buy non-running cars, scrap cars, and end-of-life vehicles across the GTA.</p>
+        </details>
+
+        <details class="reveal">
+          <summary>What details do you need for a quote? <span class="chev">⌄</span></summary>
+          <p>Year, make/model, condition (running or not), and your pickup area in the GTA. Extra details help (mileage, rust, missing catalytic converter, alloy rims).</p>
+        </details>
+
+        <details class="reveal">
+          <summary>How do I contact you? <span class="chev">⌄</span></summary>
+          <p>Call <b>647-222-6661</b>, message us on WhatsApp, or use the quote form. We’ll respond quickly.</p>
+        </details>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-card">
+          <b>CanaDrive Autos and Parts Inc.</b>
+          <p class="small">
+            Buying junk & scrap vehicles across the Greater Toronto Area (GTA). For a quick quote, call or WhatsApp us.
+          </p>
+          <div class="footer-links">
+            <a href="#quote">Get a quote</a>
+            <a id="footerCall" href="tel:+16472226661">Call 647-222-6661</a>
+            <a id="footerWhatsApp" href="#" rel="noopener">WhatsApp</a>
+            <a href="mailto:info@canadarive.co">Email</a>
+          </div>
+        </div>
+
+        <div class="footer-card">
+          <b>Business hours</b>
+          <p class="small">
+            Mon–Sat: 9:00 AM – 7:00 PM<br />
+            Sun: 10:00 AM – 4:00 PM
+          </p>
+          <p class="small" style="margin-top:12px">
+            © <span id="yearNow"></span> CanaDrive Autos and Parts Inc. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="callbar" role="region" aria-label="Call to action">
+    <div class="left">
+      <span class="pulse" aria-hidden="true"></span>
+      <div>
+        <b>Need a scrap car quote now?</b>
+        <span>Tap to call • quick pricing over the phone • GTA</span>
+      </div>
+    </div>
+    <div class="right">
+      <a class="btn" id="btnCallBar" href="tel:+16472226661">Call</a>
+      <a class="btn primary" href="#quote">Quote form</a>
+    </div>
+  </div>
+
+  <script>
+    // ====== CONFIG (UPDATED) ======
+    const BUSINESS_PHONE_DISPLAY = "647-222-6661";
+    const BUSINESS_PHONE_TEL     = "+16472226661";
+    const WHATSAPP_NUMBER_E164   = "16472226661"; // digits only
+    const BUSINESS_EMAIL         = "info@canadarive.co";
+
+    // Apply phone links everywhere
+    function setPhoneLinks(){
+      const phoneLinks = ["btnCallTop","btnCallQuote","btnCallBar","footerCall"];
+      phoneLinks.forEach(id=>{
+        const el = document.getElementById(id);
+        if(el) el.href = "tel:" + BUSINESS_PHONE_TEL;
+      });
+    }
+
+    // WhatsApp links
+    function setWhatsAppLinks(){
+      const text = encodeURIComponent("Hi CanaDrive. I want a quote to sell my scrap/junk car in the GTA. Year/Make/Model: _____. Condition: _____. Location: _____.");
+      const wa = "https://wa.me/" + WHATSAPP_NUMBER_E164 + "?text=" + text;
+      ["btnWhatsApp","footerWhatsApp"].forEach(id=>{
+        const el = document.getElementById(id);
+        if(el) el.href = wa;
+      });
+    }
+
+    // Quote form -> opens mail client (simple + no backend needed)
+    document.getElementById("quoteForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const subject = `Quote Request (GTA): ${data.get("year")} ${data.get("make")} ${data.get("model")}`;
+      const body =
+`Quote request from website
+
+Vehicle:
+- Year: ${data.get("year")}
+- Make: ${data.get("make")}
+- Model: ${data.get("model")}
+- Condition: ${data.get("condition")}
+- GTA Location: ${data.get("location")}
+
+Contact:
+- Name: ${data.get("name") || "(not provided)"}
+- Phone: ${data.get("phone")}
+
+Notes:
+${data.get("notes") || "(none)"}
+
+Requested: ${new Date().toLocaleString()}
+`;
+      const mailto = `mailto:${BUSINESS_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    if(menuBtn){
+      menuBtn.addEventListener("click", ()=>{
+        const open = mobileMenu.style.display === "block";
+        mobileMenu.style.display = open ? "none" : "block";
+        menuBtn.textContent = open ? "☰" : "✕";
+      });
+    }
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(en=>{
+        if(en.isIntersecting) en.target.classList.add("show");
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+    // Cursor spotlight on grid mask
+    const grid = document.querySelector(".grid");
+    window.addEventListener("pointermove", (e)=>{
+      if(!grid) return;
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      grid.style.setProperty("--mx", x + "%");
+      grid.style.setProperty("--my", y + "%");
+    });
+
+    // Year in footer
+    document.getElementById("yearNow").textContent = new Date().getFullYear();
+
+    setPhoneLinks();
+    setWhatsAppLinks();
+  </script>
+</body>
+</html>
