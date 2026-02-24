@@ -11,6 +11,11 @@
   <meta property="og:description" content="Instant phone evaluation. Smooth pickup scheduling. Junk • Scrap • Unwanted vehicles." />
   <meta property="og:type" content="website" />
 
+  <!-- Luxury + clean fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     :root{
       --bg: #07061a;
@@ -27,8 +32,16 @@
       --g2: #06b6d4; /* cyan */
       --g3: #22c55e; /* green */
       --g4: #f59e0b; /* amber */
-      --blue: #3b82f6;
-      --green: #22c55e;
+
+      --wa1:#25D366;
+      --wa2:#18b958;
+
+      --call1:#0f4cff;
+      --call2:#1f6bff;
+
+      --gold1:#f5d07a;
+      --gold2:#fff3cc;
+      --gold3:#caa24c;
     }
 
     *{box-sizing:border-box}
@@ -49,40 +62,78 @@
     img{max-width:100%; display:block}
     .wrap{max-width:1180px; margin:0 auto; padding:0 20px}
 
-    /* Topbar */
+    /* ===== TOPBAR (centered brand + centered nav + centered buttons) ===== */
     .topbar{
       position:sticky; top:0; z-index:50;
       backdrop-filter: blur(12px);
-      background: rgba(7,6,26,.70);
+      background: rgba(7,6,26,.72);
       border-bottom: 1px solid rgba(255,255,255,.12);
     }
     .topbar .row{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:16px; padding:14px 0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      padding:18px 0 14px;
     }
+
+    /* Brand block */
     .brand{
-      display:flex; align-items:center; gap:12px;
-      font-weight:900;
-      letter-spacing:.2px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      gap:10px;
     }
-    .mark{
-      width:42px; height:42px; border-radius:16px;
-      background: linear-gradient(135deg, var(--g1), var(--g2), var(--g3));
+    .brandline{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:16px;
+    }
+    .brand-logo{
+      height:120px;
+      width:auto;
+      border-radius:14px;
       box-shadow: 0 18px 45px rgba(0,0,0,.45);
     }
-    .brand small{
-      display:block; font-weight:700; color: var(--muted2);
-      letter-spacing:0;
-      margin-top:2px;
+    .brand-title{
+      font-family: 'Playfair Display', serif;
+      font-weight:700;
+      font-size:56px;
+      line-height:1.03;
+      letter-spacing:0.6px;
+
+      /* premium metallic/gold tone */
+      background: linear-gradient(90deg, var(--gold3), var(--gold2), var(--gold1));
+      -webkit-background-clip: text;
+      background-clip:text;
+      color: transparent;
+      text-shadow: 0 10px 40px rgba(0,0,0,.35);
     }
+    .brand-tagline{
+      font-family:'Poppins', sans-serif;
+      font-weight:700;
+      font-size:20px;
+      letter-spacing:2.2px;
+      color: rgba(244,247,255,.82);
+      margin-top: -4px;
+    }
+
+    /* Nav centered under brand */
     .nav{
-      display:flex; gap:10px; align-items:center;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
       color: var(--muted);
       font-size:14px;
     }
     .nav a{
       text-decoration:none;
-      padding:9px 10px;
+      padding:9px 12px;
       border-radius:14px;
       border: 1px solid transparent;
       transition:.18s ease;
@@ -93,35 +144,65 @@
       color: var(--text);
     }
 
-    /* Buttons */
+    /* ===== Buttons: WhatsApp green + icon, Call blue + icon, 3D ===== */
     .btn{
-      display:inline-flex; align-items:center; justify-content:center;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
       gap:10px;
-      padding:12px 16px;
+      padding:12px 18px;
       border-radius:16px;
       text-decoration:none;
       font-weight:900;
       border:1px solid rgba(255,255,255,.14);
       background: rgba(255,255,255,.08);
-      transition:.18s ease;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
       white-space:nowrap;
-      box-shadow: 0 12px 34px rgba(0,0,0,.28);
+      box-shadow: 0 10px 22px rgba(0,0,0,.35);
     }
-    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.12); }
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(34,197,94,1), rgba(34,197,94,.75));
-      border-color: rgba(34,197,94,.38);
+    .btn i{font-size:18px}
+
+    /* 3D hover/press */
+    .btn:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 16px 28px rgba(0,0,0,.45);
     }
-    .btn.primary:hover{ background: linear-gradient(135deg, rgba(34,197,94,1), rgba(34,197,94,.82)); }
-    .btn.blue{
-      background: linear-gradient(135deg, rgba(59,130,246,1), rgba(6,182,212,.78));
-      border-color: rgba(59,130,246,.38);
+    .btn:active{
+      transform: translateY(1px);
+      box-shadow: 0 8px 16px rgba(0,0,0,.55);
     }
-    .btn.blue:hover{ background: linear-gradient(135deg, rgba(59,130,246,1), rgba(6,182,212,.86)); }
+
+    .btn.call{
+      background: linear-gradient(145deg, var(--call1), var(--call2));
+      border-color: rgba(31,107,255,.45);
+      color:#fff;
+    }
+    .btn.call:hover{
+      background: linear-gradient(145deg, #0b3fe6, #2c78ff);
+    }
+
+    .btn.whatsapp{
+      background: linear-gradient(145deg, var(--wa1), var(--wa2));
+      border-color: rgba(37,211,102,.45);
+      color:#fff;
+    }
+    .btn.whatsapp:hover{
+      background: linear-gradient(145deg, #20c55d, #16a34a);
+    }
+
     .btn.ghost{
       box-shadow:none;
       background: transparent;
       border-color: rgba(255,255,255,.20);
+    }
+
+    /* Header action row */
+    .top-actions{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
     }
 
     /* Layout cards */
@@ -146,8 +227,10 @@
       align-items:stretch;
     }
     @media (max-width: 980px){
-      .nav{display:none}
       .hero-grid{grid-template-columns:1fr}
+      .brand-title{font-size:40px}
+      .brand-logo{height:92px}
+      .brand-tagline{font-size:16px; letter-spacing:1.6px}
     }
 
     .badges{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:14px; }
@@ -163,7 +246,7 @@
     }
     .dot{
       width:9px; height:9px; border-radius:999px;
-      background: var(--green);
+      background: var(--g3);
       box-shadow: 0 0 0 7px rgba(34,197,94,.14);
     }
 
@@ -202,12 +285,12 @@
       position:relative;
       min-height: unset;
     }
-.photo img{
-  width:100%;
-  height:auto;      /* <- key */
-  object-fit:contain;  /* optional, but safe */
-  filter: saturate(1.05) contrast(1.02);
-  opacity:.98;
+    .photo img{
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      filter: saturate(1.05) contrast(1.02);
+      opacity:.98;
     }
     .photo::after{
       content:"";
@@ -334,66 +417,63 @@
       background: rgba(255,255,255,.07);
       color: rgba(244,247,255,.88);
     }
-    /* Center the CanaDrive logo + name */
-.brand {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
 
-.brand img {
-    display: block;
-    margin: 0 auto 4px auto;
-}
-    /* ===== CANADRIVE BRAND HEADER ===== */
+    /* Mobile tweaks */
+    @media (max-width: 980px){
+      h1{font-size:42px}
+    }
 
-/* Make logo bigger */
-.brand img{
-    height:110px !important;
-}
-
-/* Company Name - luxury look */
-.brand div:first-child{
-    font-family: 'Playfair Display', serif;
-    font-size:42px !important;
-    font-weight:700;
-    letter-spacing:1px;
-
-    background: linear-gradient(90deg, #e6e6e6, #ffffff, #c9c9c9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Tagline */
-.brand div:last-child{
-    font-family:'Poppins', sans-serif;
-    font-size:18px !important;
-    color:#cbd5e1;
-    letter-spacing:2px;
-}
-
-/* spacing under brand */
-.brand{
-    margin-bottom:18px;
-}
+    /* Sticky mobile call bar */
+    .mobile-callbar{display:none}
+    @media (max-width: 980px){
+      .mobile-callbar{
+        display:flex; gap:10px; padding:12px;
+        position:fixed; left:12px; right:12px; bottom:12px; z-index:9999;
+        background:rgba(7,6,26,.82);
+        border:1px solid rgba(255,255,255,.14);
+        border-radius:18px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 18px 50px rgba(0,0,0,.45);
+      }
+      .mobile-callbar a{
+        flex:1; text-align:center;
+        padding:12px 10px;
+        border-radius:14px;
+        text-decoration:none;
+        font-weight:900;
+        border:1px solid rgba(255,255,255,.14);
+      }
+      .mobile-callbar a i{margin-right:8px}
+      .mobile-callbar a:active{ transform: scale(.99); }
+      .mobile-callbar .mcb-call{
+        background: linear-gradient(145deg, var(--call1), var(--call2));
+        border-color: rgba(31,107,255,.45);
+        color:#fff;
+        box-shadow: 0 10px 22px rgba(0,0,0,.35);
+      }
+      .mobile-callbar .mcb-wa{
+        background: linear-gradient(145deg, var(--wa1), var(--wa2));
+        border-color: rgba(37,211,102,.45);
+        color:#fff;
+        box-shadow: 0 10px 22px rgba(0,0,0,.35);
+      }
+    }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
   <!-- TOP BAR -->
-  <div class="brand" style="display:flex; align-items:center; gap:12px;">
-  <img src="logo.png" alt="CanaDrive Autos and Parts Inc." style="height:44px; width:auto; border-radius:8px;">
-  <div>
-    <div style="font-weight:700; font-size:18px; line-height:1.2;">CanaDrive Autos and Parts Inc.</div>
-    <div style="opacity:0.85; font-size:14px;">Junk • Scrap • Unwanted Vehicle Removal</div>
-  </div>
-</div>
+  <div class="topbar">
+    <div class="wrap row">
+      <div class="brand" aria-label="CanaDrive brand header">
+        <div class="brandline">
+          <img class="brand-logo" src="logo.png" alt="CanaDrive Autos and Parts Inc. logo">
+          <div class="brand-title">CanaDrive Autos and Parts Inc.</div>
+        </div>
+        <div class="brand-tagline">Junk • Scrap • Unwanted Vehicle Removal</div>
       </div>
 
-      <div class="nav">
+      <div class="nav" aria-label="Site navigation">
         <a href="#why">Why CanaDrive</a>
         <a href="#how">How it Works</a>
         <a href="#areas">Areas</a>
@@ -401,9 +481,9 @@
         <a href="#contact">Contact</a>
       </div>
 
-      <div style="display:flex; gap:10px; align-items:center;">
-        <a class="btn primary" href="tel:+16472226661">Call 647-222-6661</a>
-        <a class="btn blue" href="https://wa.me/16472226661">WhatsApp</a>
+      <div class="top-actions" aria-label="Quick contact buttons">
+        <a class="btn call" href="tel:+16472226661"><i class="fa-solid fa-phone"></i> Call 647-222-6661</a>
+        <a class="btn whatsapp" href="https://wa.me/16472226661"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
       </div>
     </div>
   </div>
@@ -435,19 +515,18 @@
           </p>
 
           <div class="cta-row">
-            <a class="btn primary" href="tel:+16472226661">Call for instant estimate</a>
-            <a class="btn blue" href="https://wa.me/16472226661">WhatsApp for fast reply</a>
+            <a class="btn call" href="tel:+16472226661"><i class="fa-solid fa-phone"></i> Call for instant estimate</a>
+            <a class="btn whatsapp" href="https://wa.me/16472226661"><i class="fa-brands fa-whatsapp"></i> WhatsApp for fast reply</a>
             <a class="btn ghost" href="#how">See the 3-step process</a>
           </div>
 
           <div class="micro">
             Faster estimate if you have: <b>year/make/model</b>, <b>VIN (if available)</b>, and a quick note (running / not running, damage, missing parts).
           </div>
-<div class="micro">
-  Call now: <a href="tel:+16472226661">647-222-6661</a> •
-  WhatsApp: <a href="https://wa.me/16472226661">647-222-6661</a>
-</div>
-
+          <div class="micro">
+            Call now: <a href="tel:+16472226661">647-222-6661</a> •
+            WhatsApp: <a href="https://wa.me/16472226661">647-222-6661</a>
+          </div>
         </div>
 
         <!-- PHOTO PANEL (local image from your GitHub repo) -->
@@ -584,8 +663,8 @@
             </ul>
 
             <div class="cta-row" style="margin-top:14px;">
-              <a class="btn primary" href="tel:+16472226661">Call to schedule</a>
-              <a class="btn blue" href="https://wa.me/16472226661">WhatsApp to schedule</a>
+              <a class="btn call" href="tel:+16472226661"><i class="fa-solid fa-phone"></i> Call to schedule</a>
+              <a class="btn whatsapp" href="https://wa.me/16472226661"><i class="fa-brands fa-whatsapp"></i> WhatsApp to schedule</a>
             </div>
 
             <div class="micro">
@@ -622,7 +701,6 @@
 
               <br>
               Durham Region (Pickering/Ajax/Whitby/Oshawa): <a href="junk-car-removal-durham-region.html">Junk Car Removal Durham Region</a>
-
             </p>
           </div>
         </div>
@@ -657,7 +735,7 @@
       </div>
     </section>
 
-    <!-- SEO KEYWORDS (OMVIC-safer wording: service-focused) -->
+    <!-- SEO KEYWORDS (service-focused) -->
     <section id="seo-area">
       <div class="wrap">
         <div class="card seo">
@@ -705,8 +783,8 @@
           </div>
 
           <div class="cta-row" style="margin-top:16px;">
-            <a class="btn primary" href="tel:+16472226661">Call for instant estimate</a>
-            <a class="btn blue" href="https://wa.me/16472226661">WhatsApp for fast reply</a>
+            <a class="btn call" href="tel:+16472226661"><i class="fa-solid fa-phone"></i> Call for instant estimate</a>
+            <a class="btn whatsapp" href="https://wa.me/16472226661"><i class="fa-brands fa-whatsapp"></i> WhatsApp for fast reply</a>
             <a class="btn ghost" href="#contact">Contact options</a>
           </div>
         </div>
@@ -764,8 +842,8 @@
               Tell us the vehicle details and location — we’ll evaluate instantly and help you schedule a smooth pickup.
             </p>
             <div class="cta-row">
-              <a class="btn primary" href="tel:+16472226661">647-222-6661</a>
-              <a class="btn blue" href="https://wa.me/16472226661">WhatsApp message</a>
+              <a class="btn call" href="tel:+16472226661"><i class="fa-solid fa-phone"></i> 647-222-6661</a>
+              <a class="btn whatsapp" href="https://wa.me/16472226661"><i class="fa-brands fa-whatsapp"></i> WhatsApp message</a>
             </div>
             <div class="micro">You can message: “Year / Make / Model + Running/Not + Address.”</div>
           </div>
@@ -785,10 +863,9 @@
         <div>
           <b>CanaDrive Autos and Parts Inc.</b><br />
           <span class="small">Unwanted vehicle removal • Recycling-focused outcomes</span>
-<div class="small" style="margin-top:8px;">
-  Phone: <a href="tel:+16472226661">647-222-6661</a> • WhatsApp: <a href="https://wa.me/16472226661">647-222-6661</a> • Website: www.canadrive.co
-</div>
-
+          <div class="small" style="margin-top:8px;">
+            Phone: <a href="tel:+16472226661">647-222-6661</a> • WhatsApp: <a href="https://wa.me/16472226661">647-222-6661</a> • Website: www.canadrive.co
+          </div>
         </div>
         <div class="small">
           This website describes vehicle removal and recycling-oriented services and does not offer retail motor vehicles for sale to the public.
@@ -798,49 +875,12 @@
       <div class="wrap small" style="margin-top:14px;">© 2026 CanaDrive Autos and Parts Inc. All rights reserved.</div>
     </footer>
   </main>
-<!-- Sticky mobile call bar -->
-<div class="mobile-callbar" aria-label="Quick contact bar">
-  <a class="mcb-call" href="tel:+16472226661">Call 647-222-6661</a>
-  <a class="mcb-wa" href="https://wa.me/16472226661">WhatsApp</a>
-</div>
 
-<style>
-  .mobile-callbar{display:none}
-  @media (max-width: 980px){
-    .mobile-callbar{
-      display:flex; gap:10px; padding:12px;
-      position:fixed; left:12px; right:12px; bottom:12px; z-index:9999;
-      background:rgba(7,6,26,.82);
-      border:1px solid rgba(255,255,255,.14);
-      border-radius:18px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 18px 50px rgba(0,0,0,.45);
-    }
-    .mobile-callbar a{
-      flex:1; text-align:center;
-      padding:12px 10px;
-      border-radius:14px;
-      text-decoration:none;
-      font-weight:900;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.10);
-    }
-    .mobile-callbar a:active{ transform: scale(.99); }
-  }
-</style>
+  <!-- Sticky mobile call bar -->
+  <div class="mobile-callbar" aria-label="Quick contact bar">
+    <a class="mcb-call" href="tel:+16472226661"><i class="fa-solid fa-phone"></i> Call</a>
+    <a class="mcb-wa" href="https://wa.me/16472226661"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+  </div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
