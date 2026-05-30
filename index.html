@@ -58,14 +58,20 @@
     .wrap{max-width:1180px; margin:0 auto; padding:0 20px}
 
 .topbar{
-  position:sticky; 
-  top:0; 
-  z-index:50;
-  backdrop-filter: blur(12px);
-  background: linear-gradient(135deg, #0b1f3a, #123b66, #0f2f4f);
-  border-bottom: 1px solid rgba(255,255,255,.18);
-  box-shadow: 0 10px 30px rgba(11,31,58,.22);
+position: sticky;
+top: 0;
+z-index: 9999;
+
+background: rgba(11, 31, 58, 0.68);
+
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+
+border-bottom: 1px solid rgba(255,255,255,0.15);
+
+box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
+
     .topbar .row{
       display:flex;
       flex-direction:column;
