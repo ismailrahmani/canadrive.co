@@ -18,7 +18,6 @@
   <style>
     :root{
       --dark:#071223;
-      --dark2:#0b1f3a;
       --blue:#0f4cff;
       --blue2:#1f6bff;
       --green:#25D366;
@@ -33,7 +32,6 @@
     }
 
     *{box-sizing:border-box}
-
     html{scroll-behavior:smooth}
 
     body{
@@ -56,172 +54,112 @@
       padding:0 20px;
     }
 
-/* ===== MODERN PREMIUM HEADER ===== */
+    /* ===== FIXED PREMIUM HEADER ===== */
 
-.topbar{
-  position:sticky;
-  top:0;
-  z-index:9999;
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:9999;
+      background:
+        linear-gradient(135deg,rgba(225,238,250,.96) 0%,rgba(246,249,252,.96) 20%,rgba(214,232,248,.96) 50%,rgba(246,249,252,.96) 80%,rgba(225,238,250,.96) 100%);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(15,76,129,.10);
+      box-shadow:0 12px 30px rgba(15,76,129,.08);
+      overflow:hidden;
+    }
 
-  background:
-  linear-gradient(
-    135deg,
-    rgba(225,238,250,.96) 0%,
-    rgba(246,249,252,.96) 20%,
-    rgba(214,232,248,.96) 50%,
-    rgba(246,249,252,.96) 80%,
-    rgba(225,238,250,.96) 100%
-  );
+    .topbar::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        repeating-linear-gradient(60deg,rgba(255,255,255,.22) 0px,rgba(255,255,255,.22) 2px,transparent 2px,transparent 22px),
+        repeating-linear-gradient(-60deg,rgba(15,76,129,.03) 0px,rgba(15,76,129,.03) 2px,transparent 2px,transparent 22px);
+      pointer-events:none;
+    }
 
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
+    .top-logo{
+      position:absolute;
+      left:0;
+      top:50%;
+      transform:translateY(-50%);
+      height:150px;
+      width:150px;
+      object-fit:contain;
+      z-index:3;
+    }
 
-  border-bottom:1px solid rgba(15,76,129,.10);
+    .topbar .row{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:4px;
+      padding:4px 0 5px;
+      position:relative;
+      z-index:2;
+    }
 
-  box-shadow:
-  0 12px 30px rgba(15,76,129,.08);
+    .brandline{
+      width:100%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:82px;
+      text-align:center;
+    }
 
-  overflow:hidden;
-}
+    .brand-title{
+      font-family:'Playfair Display',serif;
+      font-size:27px;
+      line-height:1.05;
+      font-weight:700;
+      text-align:center;
+      background:linear-gradient(90deg,#8c6b17,#d4af37,#f4dc8a);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
 
-/* Metallic pattern */
+    .brand-tagline{
+      color:#35506f;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:1.3px;
+      text-align:center;
+    }
 
-.topbar::before{
-  content:"";
-  position:absolute;
-  inset:0;
+    .nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:8px;
+      color:#18324f;
+      font-size:13px;
+      font-weight:700;
+    }
 
-  background:
+    .nav a{
+      text-decoration:none;
+      padding:7px 13px;
+      border-radius:14px;
+      color:#173452;
+      transition:.25s;
+    }
 
-  repeating-linear-gradient(
-    60deg,
-    rgba(255,255,255,.22) 0px,
-    rgba(255,255,255,.22) 2px,
-    transparent 2px,
-    transparent 22px
-  ),
-
-  repeating-linear-gradient(
-    -60deg,
-    rgba(15,76,129,.03) 0px,
-    rgba(15,76,129,.03) 2px,
-    transparent 2px,
-    transparent 22px
-  );
-
-  pointer-events:none;
-}
-
-.topbar .row{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:6px;
-  padding:7px 0;
-  position:relative;
-  z-index:2;
-}
-
-.brandline{
-  position:relative !important;
-  width:100% !important;
-  display:flex !important;
-  justify-content:center !important;
-  align-items:center !important;
-  min-height:75px !important;
-}
-
-.brand-logo{
-  position:absolute !important;
-  left:10px !important;
-  top:50% !important;
-  transform:translateY(-50%) !important;
-
-  height:140px !important;
-  width:140px !important;
-  max-height:140px !important;
-  max-width:140px !important;
-
-  object-fit:contain !important;
-  border-radius:0 !important;
-  background:transparent !important;
-  box-shadow:none !important;
-}
-
-.brand-title{
-  font-family:'Playfair Display',serif;
-  font-size:27px;
-  line-height:1.05;
-  font-weight:700;
-  text-align:center;
-
-  background:
-  linear-gradient(
-    90deg,
-    #8c6b17,
-    #d4af37,
-    #f4dc8a
-  );
-
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-
-.brand-tagline{
-  color:#35506f;
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:1.3px;
-  text-align:center;
-}
-
-.nav{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:8px;
-  color:#18324f;
-  font-size:13px;
-  font-weight:700;
-}
-
-.nav a{
-  text-decoration:none;
-  padding:8px 14px;
-  border-radius:14px;
-  color:#173452;
-  transition:.25s;
-}
-
-.nav a:hover{
-  background:
-  linear-gradient(
-    135deg,
-    rgba(255,255,255,.96),
-    rgba(227,239,250,.96)
-  );
-
-  box-shadow:
-  0 8px 20px rgba(15,76,129,.10);
-
-  transform:translateY(-1px);
-}
-
-.top-actions{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  justify-content:center;
-  position:relative;
-  z-index:2;
-}
+    .nav a:hover{
+      background:linear-gradient(135deg,rgba(255,255,255,.96),rgba(227,239,250,.96));
+      box-shadow:0 8px 20px rgba(15,76,129,.10);
+      transform:translateY(-1px);
+    }
 
     .top-actions{
       display:flex;
       flex-wrap:wrap;
       justify-content:center;
       gap:8px;
+      position:relative;
+      z-index:2;
     }
 
     .btn{
@@ -572,11 +510,36 @@
       h1{font-size:36px}
       h2{font-size:26px}
       .brand-title{font-size:22px}
-      .brand-logo{height:54px}
       .stats-row{grid-template-columns:repeat(2,1fr)}
       .photo{min-height:340px}
       .footgrid{grid-template-columns:1fr}
       body{padding-bottom:82px}
+
+      .top-logo{
+        height:82px;
+        width:82px;
+        left:6px;
+        top:34px;
+      }
+
+      .brandline{
+        min-height:72px;
+        padding-left:84px;
+      }
+
+      .brand-tagline{
+        font-size:10.5px;
+        letter-spacing:.8px;
+      }
+
+      .nav{
+        font-size:12px;
+        gap:5px;
+      }
+
+      .nav a{
+        padding:5px 8px;
+      }
 
       .mobile-callbar{
         display:flex;
@@ -607,103 +570,16 @@
       .mcb-call{background:linear-gradient(145deg,var(--blue),var(--blue2))}
       .mcb-wa{background:linear-gradient(145deg,#25D366,#18b958)}
     }
-    /* FINAL HEADER FIX */
-
-.topbar{
-  position:sticky !important;
-  top:0 !important;
-  min-height:120px !important;
-}
-
-.brand{
-  width:100% !important;
-  position:relative !important;
-  align-items:center !important;
-  text-align:center !important;
-}
-
-.brandline{
-  width:100% !important;
-  display:flex !important;
-  justify-content:center !important;
-  align-items:center !important;
-  position:relative !important;
-  min-height:78px !important;
-}
-
-.brand-logo{
-  position:absolute !important;
-  left:10px !important;
-  top:50% !important;
-  transform:translateY(-50%) !important;
-
-  height:78px !important;
-  width:78px !important;
-  max-height:78px !important;
-  max-width:78px !important;
-
-  object-fit:contain !important;
-  border-radius:0 !important;
-  background:transparent !important;
-  box-shadow:none !important;
-}
-
-.brand-title{
-  text-align:center !important;
-  width:100% !important;
-  margin:0 auto !important;
-}
-
-.brand-tagline{
-  text-align:center !important;
-  width:100% !important;
-}
-    /* LOGO LEFT + COMPANY NAME CENTER FIX */
-
-.brandline{
-  position:relative !important;
-  width:100% !important;
-  min-height:95px !important;
-  display:flex !important;
-  align-items:center !important;
-  justify-content:center !important;
-}
-
-.brand-logo{
-  position:absolute !important;
-  left:0 !important;
-  top:50% !important;
-  transform:translateY(-50%) !important;
-
-  height:95px !important;
-  width:95px !important;
-  max-height:95px !important;
-  max-width:95px !important;
-
-  object-fit:contain !important;
-  background:transparent !important;
-  box-shadow:none !important;
-  border-radius:0 !important;
-}
-
-.brand-title{
-  width:100% !important;
-  text-align:center !important;
-}
-
-.brand-tagline{
-  width:100% !important;
-  text-align:center !important;
-}
   </style>
 </head>
 
 <body>
 
   <div class="topbar">
+    <img class="top-logo" src="New Logo.PNG" alt="CanaDrive Logo">
+
     <div class="wrap row">
       <div class="brandline">
-        <img src="New Logo.PNG" alt="CanaDrive Logo" style="height:160px;width:160px;object-fit:contain;">
         <div>
           <div class="brand-title">CanaDrive Autos and Parts Inc.</div>
           <div class="brand-tagline">Junk • Scrap • Unwanted Vehicle Removal</div>
