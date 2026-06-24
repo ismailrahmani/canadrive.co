@@ -67,69 +67,90 @@
       box-shadow:0 10px 30px rgba(0,0,0,.18);
     }
 
-    .topbar .row{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:6px;
-      padding:7px 0;
-    }
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:9999;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(15,76,129,.025) 0px,
+      rgba(15,76,129,.025) 1px,
+      transparent 1px,
+      transparent 16px
+    ),
+    linear-gradient(135deg,rgba(255,255,255,.94),rgba(238,247,255,.92));
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(15,76,129,.12);
+  box-shadow:0 8px 25px rgba(15,76,129,.10);
+}
 
-    .brandline{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      text-align:center;
-    }
+.topbar .row{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  padding:7px 0;
+}
 
-    .brand-logo{
-      height:62px;
-      width:auto;
-      border-radius:12px;
-      background:white;
-      box-shadow:0 8px 20px rgba(0,0,0,.18);
-    }
+.brandline{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  text-align:center;
+}
 
-    .brand-title{
-      font-family:'Playfair Display',serif;
-      font-size:26px;
-      line-height:1.05;
-      font-weight:700;
-      background:linear-gradient(90deg,#9e7a1a,#d4af37,#ffe89a);
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
-    }
+.brand-logo{
+  height:62px;
+  width:auto;
+  border-radius:12px;
+  background:white;
+  box-shadow:0 8px 20px rgba(15,76,129,.14);
+}
 
-    .brand-tagline{
-      color:#eef7ff;
-      font-family:'Poppins',sans-serif;
-      font-size:12px;
-      letter-spacing:1.3px;
-      font-weight:700;
-      text-align:center;
-    }
+.brand-title{
+  font-family:'Playfair Display',serif;
+  font-size:26px;
+  line-height:1.05;
+  font-weight:700;
+  background:linear-gradient(90deg,#8a6814,#d4af37,#f2d675);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
 
-    .nav{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:6px;
-      color:#eef7ff;
-      font-size:13px;
-    }
+.brand-tagline{
+  color:#4d6278;
+  font-family:'Poppins',sans-serif;
+  font-size:12px;
+  letter-spacing:1.3px;
+  font-weight:700;
+  text-align:center;
+}
 
-    .nav a{
-      text-decoration:none;
-      padding:6px 10px;
-      border-radius:12px;
-      transition:.18s ease;
-    }
+.nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:6px;
+  color:#18324f;
+  font-size:13px;
+  font-weight:700;
+}
 
-    .nav a:hover{
-      background:rgba(255,255,255,.14);
-    }
+.nav a{
+  text-decoration:none;
+  padding:6px 10px;
+  border-radius:12px;
+  transition:.18s ease;
+}
+
+.nav a:hover{
+  background:#ffffff;
+  box-shadow:0 6px 18px rgba(15,76,129,.10);
+}
 
     .top-actions{
       display:flex;
