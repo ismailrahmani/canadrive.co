@@ -3,469 +3,549 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CanaDrive Autos and Parts Inc. | Junk Car Removal & Scrap Vehicle Pickup (GTA)</title>
-  <meta name="description" content="CanaDrive provides junk car removal, scrap car removal and unwanted vehicle pickup across the GTA. Instant phone evaluation and smooth pickup scheduling. Call or WhatsApp 647-222-6661." />
 
-  <meta property="og:title" content="CanaDrive | Junk Car Removal & Scrap Vehicle Pickup (GTA)" />
-  <meta property="og:description" content="Instant phone evaluation. Smooth pickup scheduling. Junk • Scrap • Unwanted vehicles." />
+  <title>Junk Car Removal Toronto | Scrap Car Pickup GTA | CanaDrive</title>
+
+  <meta name="description" content="CanaDrive Autos and Parts Inc. provides junk car removal, scrap vehicle pickup and unwanted car removal across the GTA and surrounding areas. Call or WhatsApp 647-222-6661 for a fast vehicle evaluation." />
+
+  <meta property="og:title" content="CanaDrive | Junk Car Removal & Scrap Vehicle Pickup GTA" />
+  <meta property="og:description" content="Fast vehicle evaluation. Professional pickup. Junk, scrap, damaged and unwanted vehicle removal across the GTA." />
   <meta property="og:type" content="website" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     :root{
-      --bg: #eaf6ff;
-      --card: rgba(255,255,255,.94);
-      --card2: rgba(255,255,255,.86);
-      --stroke: rgba(15,76,129,.13);
-      --text: #102033;
-      --muted: rgba(16,32,51,.78);
-      --muted2: rgba(16,32,51,.62);
-      --shadow: 0 18px 45px rgba(15,76,129,.14);
-      --radius: 22px;
-
-      --g1: #2563eb;
-      --g2: #06b6d4;
-      --g3: #16a34a;
-      --g4: #f59e0b;
-
-      --wa1:#25D366;
-      --wa2:#18b958;
-
-      --call1:#0f4cff;
-      --call2:#1f6bff;
-
-      --gold1:#d4af37;
-      --gold2:#f4d87a;
-      --gold3:#9e7a1a;
+      --dark:#071223;
+      --dark2:#0b1f3a;
+      --blue:#0f4cff;
+      --blue2:#1f6bff;
+      --green:#25D366;
+      --gold:#d4af37;
+      --bg:#eef6fb;
+      --card:#ffffff;
+      --text:#102033;
+      --muted:#5d6f85;
+      --border:rgba(15,76,129,.12);
+      --shadow:0 12px 35px rgba(0,0,0,.08);
+      --radius:22px;
     }
 
     *{box-sizing:border-box}
+
     html{scroll-behavior:smooth}
+
     body{
       margin:0;
-      color: var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
       background:
-  radial-gradient(1000px 600px at 10% 10%, rgba(96,165,250,.30), transparent 60%),
-  radial-gradient(900px 600px at 90% 10%, rgba(14,165,233,.28), transparent 60%),
-  linear-gradient(180deg,#d8ecfa 0%,#c7e3f5 45%,#b7d8ee 100%);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+        radial-gradient(900px 500px at 10% 0%, rgba(31,107,255,.16), transparent 60%),
+        radial-gradient(800px 500px at 90% 5%, rgba(37,211,102,.10), transparent 55%),
+        linear-gradient(180deg,#eef6fb 0%,#f8fbfd 55%,#eef6fb 100%);
       line-height:1.55;
     }
+
     a{color:inherit}
-    img{max-width:100%; display:block}
-    .wrap{max-width:1180px; margin:0 auto; padding:0 20px}
+    img{max-width:100%;display:block}
 
-.topbar{
-position: sticky;
-top: 0;
-z-index: 9999;
+    .wrap{
+      max-width:1180px;
+      margin:0 auto;
+      padding:0 20px;
+    }
 
-background: rgba(11, 31, 58, 0.68);
-
-backdrop-filter: blur(12px);
--webkit-backdrop-filter: blur(12px);
-
-border-bottom: 1px solid rgba(255,255,255,0.15);
-
-box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:9999;
+      background:rgba(7,18,35,.86);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(255,255,255,.12);
+      box-shadow:0 10px 30px rgba(0,0,0,.18);
+    }
 
     .topbar .row{
       display:flex;
       flex-direction:column;
       align-items:center;
-      justify-content:center;
-      gap:4px;
-      padding:4px 0 4px;
+      gap:6px;
+      padding:7px 0;
     }
 
-    .brand{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      text-align:center;
-      gap:3px;
-    }
     .brandline{
       display:flex;
       align-items:center;
       justify-content:center;
       gap:10px;
+      text-align:center;
     }
+
     .brand-logo{
-      height:75px;
+      height:62px;
       width:auto;
       border-radius:12px;
-      box-shadow: 0 8px 20px rgba(15,76,129,.15);
+      background:white;
+      box-shadow:0 8px 20px rgba(0,0,0,.18);
     }
-    .brand-title{
-      font-family: 'Playfair Display', serif;
-      font-weight:700;
-      font-size:30px;
-      line-height:1.02;
-      letter-spacing:0.4px;
-      background: linear-gradient(90deg, var(--gold3), var(--gold1), var(--gold2));
-      -webkit-background-clip: text;
-      background-clip:text;
-      color: transparent;
-      text-shadow: 0 6px 22px rgba(158,122,26,.18);
-    }
-.brand-tagline{
-  font-family:'Poppins', sans-serif;
-  font-weight:700;
-  font-size:12px;
-  letter-spacing:1.2px;
-  color:#eef7ff;
-  margin-top:-2px;
-}
 
-.nav{
-  display:flex;
-  flex-wrap:wrap;
-  gap:7px;
-  align-items:center;
-  justify-content:center;
-  color:#eef7ff;
-  font-size:13px;
-}
+    .brand-title{
+      font-family:'Playfair Display',serif;
+      font-size:26px;
+      line-height:1.05;
+      font-weight:700;
+      background:linear-gradient(90deg,#9e7a1a,#d4af37,#ffe89a);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .brand-tagline{
+      color:#eef7ff;
+      font-family:'Poppins',sans-serif;
+      font-size:12px;
+      letter-spacing:1.3px;
+      font-weight:700;
+      text-align:center;
+    }
+
+    .nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:6px;
+      color:#eef7ff;
+      font-size:13px;
+    }
+
     .nav a{
       text-decoration:none;
       padding:6px 10px;
       border-radius:12px;
-      border: 1px solid transparent;
       transition:.18s ease;
     }
-.nav a:hover{
-  background: rgba(255,255,255,.16);
-  border-color: rgba(255,255,255,.25);
-  color:#ffffff;
-}
+
+    .nav a:hover{
+      background:rgba(255,255,255,.14);
+    }
+
+    .top-actions{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:8px;
+    }
 
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
       gap:9px;
-      padding:10px 16px;
+      padding:11px 17px;
       border-radius:15px;
       text-decoration:none;
       font-weight:900;
-      border:1px solid rgba(15,76,129,.12);
-      background: rgba(255,255,255,.72);
-      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+      border:1px solid transparent;
+      transition:.18s ease;
       white-space:nowrap;
-      box-shadow: 0 10px 22px rgba(15,76,129,.14);
+      box-shadow:0 10px 22px rgba(0,0,0,.10);
     }
-    .btn i{font-size:17px}
+
     .btn:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 16px 28px rgba(15,76,129,.18);
+      transform:translateY(-2px);
+      box-shadow:0 16px 28px rgba(0,0,0,.14);
     }
-    .btn:active{
-      transform: translateY(1px);
-      box-shadow: 0 8px 16px rgba(15,76,129,.16);
-    }
+
     .btn.call{
-      background: linear-gradient(145deg, var(--call1), var(--call2));
-      border-color: rgba(31,107,255,.45);
-      color:#fff;
+      background:linear-gradient(145deg,var(--blue),var(--blue2));
+      color:white;
     }
-    .btn.call:hover{
-      background: linear-gradient(145deg, #0b3fe6, #2c78ff);
-    }
+
     .btn.whatsapp{
-      background: linear-gradient(145deg, var(--wa1), var(--wa2));
-      border-color: rgba(37,211,102,.45);
-      color:#fff;
+      background:linear-gradient(145deg,#25D366,#18b958);
+      color:white;
     }
-    .btn.whatsapp:hover{
-      background: linear-gradient(145deg, #20c55d, #16a34a);
-    }
+
     .btn.ghost{
-      box-shadow:none;
-      background:#ffffff;
-      border-color: rgba(15,76,129,.16);
-      color:#102033;
+      background:white;
+      color:var(--text);
+      border-color:var(--border);
     }
 
-    .top-actions{
-      display:flex;
-      gap:8px;
-      align-items:center;
-      justify-content:center;
-      flex-wrap:wrap;
+    .hero{
+      padding:24px 0 24px;
     }
 
-.card{
-    background: #eef2f7;
-    border: 1px solid rgba(15,76,129,.10);
-}
-
-.soft{
-    background: #eef2f7;
-}
-
-    .hero{ padding:12px 0 18px; }
     .hero-grid{
       display:grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap:18px;
+      grid-template-columns:1.02fr .98fr;
+      gap:20px;
       align-items:stretch;
     }
-    @media (max-width: 980px){
-      .hero-grid{grid-template-columns:1fr}
-      .brand-title{font-size:24px}
-      .brand-logo{height:58px}
-      .brand-tagline{font-size:11px; letter-spacing:1px}
-      .brandline{gap:8px}
+
+    .card{
+      background:white;
+      border:1px solid rgba(15,76,129,.10);
+      box-shadow:var(--shadow);
+      border-radius:var(--radius);
+      padding:24px;
     }
 
-    .badges{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:14px; }
+    .badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:15px;
+    }
+
     .badge{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:9px 12px;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
       border-radius:999px;
-      border:1px solid rgba(15,76,129,.12);
-      background:#f3faff;
-      color:#18324f;
+      background:#f2f8ff;
+      border:1px solid var(--border);
       font-size:13px;
       font-weight:800;
+      color:#18324f;
     }
+
     .dot{
-      width:9px; height:9px; border-radius:999px;
-      background: var(--g3);
-      box-shadow: 0 0 0 7px rgba(34,197,94,.14);
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:#22c55e;
+      box-shadow:0 0 0 7px rgba(34,197,94,.14);
     }
 
     h1{
-      font-size:52px;
-      line-height:1.03;
       margin:0 0 14px;
-      letter-spacing:-.9px;
+      font-size:48px;
+      line-height:1.04;
+      letter-spacing:-1px;
     }
-    .lead{
-      margin:0 0 14px;
-      color: var(--muted);
+
+    h2{
+      margin:0 0 10px;
+      font-size:30px;
+      letter-spacing:-.4px;
+    }
+
+    h3{
+      margin:0 0 8px;
       font-size:18px;
-      max-width: 62ch;
     }
-    .cta-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+
+    .lead{
+      font-size:18px;
+      color:var(--muted);
+      margin:0 0 12px;
+      max-width:66ch;
+    }
+
+    .sub{
+      color:var(--muted);
+      margin:0;
+      font-size:15px;
+    }
+
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:16px;
+    }
+
     .micro{
       margin-top:12px;
-      color:#5f738a;
-      font-size:12.7px;
-    }
-    .gradient-text{
-      background: linear-gradient(90deg, var(--g4), var(--g2), var(--g3));
-      -webkit-background-clip:text;
-      background-clip:text;
-      color: transparent;
+      color:#62758c;
+      font-size:13px;
     }
 
     .photo{
-      border-radius: 22px;
-      overflow:hidden;
-      border:1px solid rgba(15,76,129,.12);
-      background:#ffffff;
-      box-shadow: 0 18px 45px rgba(15,76,129,.14);
       position:relative;
-      min-height: unset;
-    }
-    .photo img{
-      width:100%;
-      height:auto;
-      object-fit:contain;
-      filter: saturate(1.05) contrast(1.02);
-      opacity:.98;
-    }
-    .photo::after{
-      content:"";
-      position:absolute; inset:0;
-      background:
-        linear-gradient(180deg, rgba(16,32,51,.02), rgba(16,32,51,.70) 78%),
-        radial-gradient(900px 420px at 20% 30%, rgba(37,99,235,.10), transparent 55%),
-        radial-gradient(900px 420px at 80% 20%, rgba(6,182,212,.12), transparent 55%);
-      pointer-events:none;
-    }
-    .photo .overlay{
-      position:absolute; inset:auto 0 0 0;
-      padding: 16px 16px 14px;
-      z-index:2;
-      color:#fff;
-    }
-    .overlay strong{
-      display:block;
-      font-size:16px;
-      letter-spacing:-.2px;
-      margin-bottom:4px;
-    }
-    .overlay span{
-      display:block;
-      color: rgba(255,255,255,.82);
-      font-size:13px;
-      max-width: 70ch;
+      overflow:hidden;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      border:1px solid rgba(15,76,129,.12);
+      background:#111;
+      min-height:430px;
     }
 
-    section{ padding: 26px 0; }
-    .head{
-      display:flex; align-items:flex-end; justify-content:space-between;
-      gap:16px; margin-bottom:14px;
+    .photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:saturate(1.06) contrast(1.04);
     }
-    h2{
-      margin:0;
-      font-size:28px;
-      letter-spacing:-.4px;
+
+    .photo::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,rgba(0,0,0,.04),rgba(0,0,0,.72) 84%);
+      pointer-events:none;
     }
-    .sub{
-      margin:0;
-      color: var(--muted);
+
+    .overlay{
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      z-index:2;
+      color:white;
+      padding:20px;
+    }
+
+    .overlay strong{
+      display:block;
+      font-size:20px;
+      margin-bottom:5px;
+    }
+
+    .overlay span{
+      color:rgba(255,255,255,.86);
       font-size:14px;
-      max-width: 75ch;
+    }
+
+    .stats-row{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+      margin-top:20px;
+    }
+
+    .stat-box{
+      background:#f7fbff;
+      padding:16px;
+      border-radius:16px;
+      text-align:center;
+      border:1px solid var(--border);
+    }
+
+    .stat-box strong{
+      display:block;
+      font-size:25px;
+      color:var(--blue);
+    }
+
+    .stat-box span{
+      font-size:13px;
+      color:var(--muted);
+      font-weight:700;
+    }
+
+    section{
+      padding:28px 0;
+    }
+
+    .head{
+      margin-bottom:16px;
     }
 
     .grid{
       display:grid;
-      grid-template-columns: repeat(12, 1fr);
+      grid-template-columns:repeat(12,1fr);
       gap:14px;
     }
-    .col-4{ grid-column: span 4; }
-    .col-6{ grid-column: span 6; }
-    .col-12{ grid-column: span 12; }
-    @media(max-width: 980px){
-      .col-4,.col-6{ grid-column: span 12; }
-    }
 
-    .feature h3{ margin:0 0 6px; font-size:16px; letter-spacing:-.2px; }
-    .feature p{ margin:0; color: var(--muted); font-size:14px; }
+    .col-4{grid-column:span 4}
+    .col-6{grid-column:span 6}
+    .col-12{grid-column:span 12}
 
     .icon{
-      width:34px; height:34px;
+      width:40px;
+      height:40px;
       border-radius:14px;
-      display:inline-flex; align-items:center; justify-content:center;
-      margin-bottom:10px;
-      border:1px solid rgba(15,76,129,.12);
-      background:#eef8ff;
-      color:#0f4cff;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:#eef6ff;
+      color:var(--blue);
+      margin-bottom:12px;
+      border:1px solid var(--border);
+      font-size:18px;
     }
-    .icon svg{ width:18px; height:18px; opacity:.95 }
 
     ul{
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: var(--muted);
-      font-size:14px;
+      margin:10px 0 0;
+      padding-left:20px;
+      color:var(--muted);
+      font-size:15px;
     }
-    li{ margin: 6px 0; }
+
+    li{margin:6px 0}
+
+    .gallery-img{
+      height:260px;
+      border-radius:18px;
+      overflow:hidden;
+      position:relative;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(15,76,129,.12);
+      background:#111;
+    }
+
+    .gallery-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .gallery-img::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.72));
+    }
+
+    .gallery-img span{
+      position:absolute;
+      left:14px;
+      right:14px;
+      bottom:13px;
+      z-index:2;
+      color:white;
+      font-weight:900;
+      text-shadow:0 2px 8px rgba(0,0,0,.45);
+    }
 
     details{
-      background:#ffffff;
-      border:1px solid rgba(15,76,129,.12);
-      border-radius: 18px;
-      padding: 12px 14px;
-      box-shadow: 0 10px 30px rgba(15,76,129,.08);
+      background:white;
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:14px 16px;
+      box-shadow:0 8px 22px rgba(0,0,0,.05);
     }
+
     summary{
       cursor:pointer;
       font-weight:900;
-      color:#102033;
       list-style:none;
     }
+
     summary::-webkit-details-marker{display:none}
+
     details p{
+      color:var(--muted);
       margin:10px 0 0;
-      color: var(--muted);
-      font-size:14px;
+      font-size:15px;
     }
-    .faq{ display:grid; gap:10px; }
 
-    .seo h3{ margin: 16px 0 8px; font-size:18px; letter-spacing:-.2px; }
+    .faq{
+      display:grid;
+      gap:10px;
+    }
 
-    footer{
-      padding: 34px 0 42px;
-      border-top: 1px solid rgba(15,76,129,.12);
-      background:#edf7ff;
-      color:#35506f;
-      font-size:13px;
+    .pillrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      margin-top:14px;
     }
-    .footgrid{
-      display:grid; grid-template-columns: 1fr 1fr; gap:14px;
-      align-items:start;
-    }
-    @media(max-width: 980px){ .footgrid{grid-template-columns:1fr} }
-    .small{ font-size:12.5px; color:#5f738a; }
-    .pillrow{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
+
     .pilltag{
-      font-size:12.5px; font-weight:800;
       padding:8px 10px;
       border-radius:999px;
-      border:1px solid rgba(15,76,129,.12);
-      background:#f3faff;
+      background:#f2f8ff;
+      border:1px solid var(--border);
+      font-size:13px;
+      font-weight:800;
       color:#18324f;
     }
 
-    @media (max-width: 980px){
-      h1{font-size:38px}
+    footer{
+      padding:34px 0 42px;
+      background:#071223;
+      color:#eaf3ff;
+      font-size:14px;
     }
 
-    .mobile-callbar{display:none}
-    @media (max-width: 980px){
+    footer .small{
+      color:rgba(234,243,255,.76);
+      font-size:13px;
+    }
+
+    .footgrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .mobile-callbar{
+      display:none;
+    }
+
+    @media(max-width:980px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .col-4,.col-6,.col-12{grid-column:span 1}
+      h1{font-size:36px}
+      h2{font-size:26px}
+      .brand-title{font-size:22px}
+      .brand-logo{height:54px}
+      .stats-row{grid-template-columns:repeat(2,1fr)}
+      .photo{min-height:340px}
+      .footgrid{grid-template-columns:1fr}
+      body{padding-bottom:82px}
+
       .mobile-callbar{
-        display:flex; gap:10px; padding:12px;
-        position:fixed; left:12px; right:12px; bottom:12px; z-index:9999;
-        background:rgba(245,250,255,.95);
-        border:1px solid rgba(15,76,129,.14);
+        display:flex;
+        position:fixed;
+        left:12px;
+        right:12px;
+        bottom:12px;
+        z-index:99999;
+        gap:10px;
+        padding:12px;
+        background:rgba(255,255,255,.94);
+        border:1px solid var(--border);
         border-radius:18px;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 18px 50px rgba(15,76,129,.18);
+        backdrop-filter:blur(12px);
+        box-shadow:0 18px 50px rgba(0,0,0,.20);
       }
+
       .mobile-callbar a{
-        flex:1; text-align:center;
-        padding:12px 10px;
+        flex:1;
+        text-align:center;
+        padding:12px 8px;
         border-radius:14px;
         text-decoration:none;
         font-weight:900;
-        border:1px solid rgba(15,76,129,.14);
+        color:white;
       }
-      .mobile-callbar a i{margin-right:8px}
-      .mobile-callbar a:active{ transform: scale(.99); }
-      .mobile-callbar .mcb-call{
-        background: linear-gradient(145deg, var(--call1), var(--call2));
-        border-color: rgba(31,107,255,.45);
-        color:#fff;
-        box-shadow: 0 10px 22px rgba(15,76,129,.16);
-      }
-      .mobile-callbar .mcb-wa{
-        background: linear-gradient(145deg, var(--wa1), var(--wa2));
-        border-color: rgba(37,211,102,.45);
-        color:#fff;
-        box-shadow: 0 10px 22px rgba(15,76,129,.16);
-      }
+
+      .mcb-call{background:linear-gradient(145deg,var(--blue),var(--blue2))}
+      .mcb-wa{background:linear-gradient(145deg,#25D366,#18b958)}
     }
   </style>
 </head>
 
 <body>
+
   <div class="topbar">
     <div class="wrap row">
-      <div class="brand" aria-label="CanaDrive brand header">
-        <div class="brandline">
-          <img class="brand-logo" src="logo.png" alt="CanaDrive Autos and Parts Inc. logo">
+      <div class="brandline">
+        <img class="brand-logo" src="logo.png" alt="CanaDrive Autos and Parts Inc. logo">
+        <div>
           <div class="brand-title">CanaDrive Autos and Parts Inc.</div>
+          <div class="brand-tagline">Junk • Scrap • Unwanted Vehicle Removal</div>
         </div>
-        <div class="brand-tagline">Junk • Scrap • Unwanted Vehicle Removal</div>
       </div>
 
-      <div class="nav" aria-label="Site navigation">
+      <div class="nav">
         <a href="#why">Why CanaDrive</a>
-        <a href="#how">How it Works</a>
+        <a href="#how">How It Works</a>
+        <a href="#gallery">Real Pickups</a>
         <a href="#areas">Areas</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </div>
 
-      <div class="top-actions" aria-label="Quick contact buttons">
+      <div class="top-actions">
         <a class="btn call" href="tel:+16472226661"><i class="fa-solid fa-phone"></i> Call 647-222-6661</a>
         <a class="btn whatsapp" href="https://wa.me/16472226661"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
       </div>
@@ -473,124 +553,121 @@ box-shadow: 0 8px 25px rgba(0,0,0,0.15);
   </div>
 
   <main>
-    <div class="wrap hero" id="top">
+
+    <div class="wrap hero">
       <div class="hero-grid">
+
         <div class="card">
           <div class="badges">
-            <div class="badge"><span class="dot"></span> Instant phone evaluation</div>
-            <div class="badge">Smooth pickup experience</div>
+            <div class="badge"><span class="dot"></span> Fast phone evaluation</div>
+            <div class="badge">Professional pickup</div>
             <div class="badge">Clear communication</div>
-            <div class="badge">Fast scheduling</div>
+            <div class="badge">GTA & surrounding areas</div>
           </div>
 
-          <h1>Get Rid of Your Unwanted Car — <span class="gradient-text">Fast, Smooth, Stress-Free</span></h1>
+          <h1>Junk Car Removal & Scrap Vehicle Pickup Across the GTA</h1>
 
           <p class="lead">
-            If an old car is taking up space, causing stress, or simply not worth repairing anymore,
-            CanaDrive makes removal easy. Our team has hands-on experience with junk, scrap, damaged,
-            and end-of-life vehicles — and we keep the process simple with <b>instant evaluation by phone</b>
-            and a <b>smooth pickup plan</b>.
+            CanaDrive helps remove junk, scrap, damaged, unwanted and end-of-life vehicles with a simple process:
+            fast evaluation, clear communication and smooth pickup scheduling.
           </p>
 
-          <p class="lead" style="margin-top:-6px;">
-            Call or WhatsApp now and we’ll provide an <b>instant value estimate</b> based on your vehicle details
-            (condition, missing parts, and location) — then help you schedule the easiest next step.
+          <p class="lead">
+            Call or WhatsApp now with your year, make, model, condition and location. We will give you a fast value estimate and help arrange pickup.
           </p>
 
           <div class="cta-row">
-            <a class="btn call" href="tel:+16472226661"><i class="fa-solid fa-phone"></i> Call for instant estimate</a>
-            <a class="btn whatsapp" href="https://wa.me/16472226661"><i class="fa-brands fa-whatsapp"></i> WhatsApp for fast reply</a>
-            <a class="btn ghost" href="#how">See the 3-step process</a>
+            <a class="btn call" href="tel:+16472226661"><i class="fa-solid fa-phone"></i> Call for estimate</a>
+            <a class="btn whatsapp" href="https://wa.me/16472226661"><i class="fa-brands fa-whatsapp"></i> WhatsApp photos</a>
+            <a class="btn ghost" href="#how">See process</a>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-box">
+              <strong>Fast</strong>
+              <span>Phone Evaluation</span>
+            </div>
+            <div class="stat-box">
+              <strong>5★</strong>
+              <span>Customer Reviews</span>
+            </div>
+            <div class="stat-box">
+              <strong>GTA</strong>
+              <span>Service Area</span>
+            </div>
+            <div class="stat-box">
+              <strong>7 Days</strong>
+              <span>Pickup Scheduling</span>
+            </div>
           </div>
 
           <div class="micro">
-            Faster estimate if you have: <b>year/make/model</b>, <b>VIN (if available)</b>, and a quick note (running / not running, damage, missing parts).
-          </div>
-          <div class="micro">
-            Call now: <a href="tel:+16472226661">647-222-6661</a> •
-            WhatsApp: <a href="https://wa.me/16472226661">647-222-6661</a>
+            Faster estimate if you provide: year/make/model, running or not, missing parts, damage, location and photos.
           </div>
         </div>
 
-        <div class="photo" aria-label="Vehicle removal photo">
-          <img
-            src="canadrive-hero.png"
-            alt="CanaDrive tow truck picking up an unwanted vehicle"
-            loading="lazy"
-          />
+        <div class="photo">
+          <img src="nissan-rogue-towing-severn-canadrive.jpeg" alt="CanaDrive towing a Nissan Rogue for junk car removal">
           <div class="overlay">
-            <strong>Experienced pickup, calm process</strong>
-            <span>We focus on a smooth removal experience — clear steps, fast answers, and respectful communication.</span>
+            <strong>Real CanaDrive pickup work</strong>
+            <span>Actual vehicle removal using truck and trailer — professional, careful and straightforward.</span>
           </div>
         </div>
+
       </div>
     </div>
 
     <section id="why">
       <div class="wrap">
         <div class="head">
-          <div>
-            <h2>Why CanaDrive feels easier</h2>
-            <p class="sub">
-              Most people contact us because they want the car gone without stress — no confusion, no delays, no back-and-forth.
-              We are built for fast answers, smooth pickup, and clear next steps.
-            </p>
-          </div>
+          <h2>Why choose CanaDrive?</h2>
+          <p class="sub">
+            People call us when they want the vehicle gone without stress, confusion or delays.
+          </p>
         </div>
 
         <div class="grid">
-          <div class="card soft feature col-4">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 8v5l3 3"></path>
-                <circle cx="12" cy="12" r="9"></circle>
-              </svg>
-            </div>
-            <h3>Instant clarity</h3>
-            <p>We ask the right questions and give a clear estimate quickly, so you can decide without wasting time.</p>
+          <div class="card col-4">
+            <div class="icon"><i class="fa-solid fa-phone-volume"></i></div>
+            <h3>Fast evaluation</h3>
+            <p class="sub">We ask the right questions and provide a clear estimate quickly.</p>
           </div>
 
-          <div class="card soft feature col-4">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M20 7l-8 10-4-4"></path>
-              </svg>
-            </div>
-            <h3>Smooth pickup experience</h3>
-            <p>We handle removal professionally and keep communication simple so the process feels easy from start to finish.</p>
+          <div class="card col-4">
+            <div class="icon"><i class="fa-solid fa-truck-pickup"></i></div>
+            <h3>Professional pickup</h3>
+            <p class="sub">We use proper loading, tie-down and transport steps for a smooth removal.</p>
           </div>
 
-          <div class="card soft feature col-4">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2l3 7h7l-5.6 4 2.1 7L12 16l-6.5 4 2.1-7L2 9h7z"></path>
-              </svg>
-            </div>
-            <h3>Experience you can feel</h3>
-            <p>We’ve handled many junk/unwanted vehicle situations and know how to prevent common hassles.</p>
+          <div class="card col-4">
+            <div class="icon"><i class="fa-solid fa-comments"></i></div>
+            <h3>Clear communication</h3>
+            <p class="sub">No pressure, no runaround — just clear steps and honest scheduling.</p>
           </div>
 
-          <div class="card soft feature col-6">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 12h18"></path>
-                <path d="M7 8l-4 4 4 4"></path>
-                <path d="M17 8l4 4-4 4"></path>
-              </svg>
-            </div>
-            <h3>Perfect when you just want it gone</h3>
-            <p>Non-running, damaged, old, high mileage, or end-of-life — we help you clear the space and move on.</p>
+          <div class="card col-6">
+            <div class="icon"><i class="fa-solid fa-car-burst"></i></div>
+            <h3>Damaged and non-running vehicles</h3>
+            <p class="sub">We commonly help with accident vehicles, mechanical failures, high-mileage cars and vehicles no longer worth repairing.</p>
           </div>
 
-          <div class="card soft feature col-6">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 21s-8-4.5-8-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-8 11-8 11z"></path>
-              </svg>
-            </div>
-            <h3>Respectful, straightforward communication</h3>
-            <p>No pressure. No runaround. Just clear steps, quick evaluation, and a plan for smooth removal.</p>
+          <div class="card col-6">
+            <div class="icon"><i class="fa-solid fa-recycle"></i></div>
+            <h3>Recycling-focused outcome</h3>
+            <p class="sub">CanaDrive focuses on vehicle removal and recycling-oriented solutions for unwanted and end-of-life vehicles.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="card">
+          <h2>About CanaDrive</h2>
+          <p class="sub">
+            CanaDrive Autos and Parts Inc. is a vehicle removal and recycling-focused company serving the Greater Toronto Area and surrounding communities.
+            We help vehicle owners remove unwanted, damaged, scrap and end-of-life vehicles through a straightforward process focused on clear communication and smooth pickup scheduling.
+          </p>
         </div>
       </div>
     </section>
@@ -598,58 +675,50 @@ box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     <section id="how">
       <div class="wrap">
         <div class="head">
-          <div>
-            <h2>The smooth 3-step process</h2>
-            <p class="sub">Designed for fast answers and a clean, easy pickup experience.</p>
-          </div>
+          <h2>The simple 3-step process</h2>
+          <p class="sub">Fast, clear and easy from first message to pickup.</p>
         </div>
 
         <div class="grid">
           <div class="card col-4">
-            <h3 style="margin:0 0 6px;">1) Quick details</h3>
-            <p class="sub">Call or WhatsApp: year/make/model, condition, missing parts (if any), and location. Photos help but aren’t required.</p>
+            <h3>1) Send vehicle details</h3>
+            <p class="sub">Year, make, model, condition, location and photos if available.</p>
           </div>
+
           <div class="card col-4">
-            <h3 style="margin:0 0 6px;">2) Instant phone evaluation</h3>
-            <p class="sub">We evaluate right away and explain what affects the estimate — simple and transparent.</p>
+            <h3>2) Get a fast estimate</h3>
+            <p class="sub">We evaluate based on condition, missing parts, location and recoverable material/parts value.</p>
           </div>
+
           <div class="card col-4">
-            <h3 style="margin:0 0 6px;">3) Schedule pickup</h3>
-            <p class="sub">We confirm a time window and keep communication clear so the vehicle is removed smoothly.</p>
+            <h3>3) Schedule pickup</h3>
+            <p class="sub">We confirm timing and remove the vehicle smoothly.</p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="grid" style="margin-top:14px;">
-          <div class="photo col-6" style="min-height:260px;">
-            <img
-              src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1600&q=70"
-              alt="Mechanic tools and car service concept"
-              loading="lazy"
-            />
-            <div class="overlay">
-              <strong>We handle difficult situations</strong>
-              <span>Non-running, damaged, or end-of-life vehicles — we guide the smoothest option.</span>
-            </div>
+    <section id="gallery">
+      <div class="wrap">
+        <div class="head">
+          <h2>Real vehicle pickups</h2>
+          <p class="sub">Use real photos because they build more trust than stock images.</p>
+        </div>
+
+        <div class="grid">
+          <div class="gallery-img col-4">
+            <img src="nissan-rogue-towing-severn-canadrive.jpeg" alt="Nissan Rogue junk car removal by CanaDrive">
+            <span>Nissan Rogue pickup</span>
           </div>
 
-          <div class="card col-6">
-            <h3 style="margin:0 0 8px;">Most common reasons people contact us</h3>
-            <ul>
-              <li>Car is non-running or unsafe to drive</li>
-              <li>Too expensive to repair</li>
-              <li>Taking up driveway or parking space</li>
-              <li>Accident damage / major mechanical issues</li>
-              <li>You want a clean, quick solution</li>
-            </ul>
+          <div class="gallery-img col-4">
+            <img src="Eastern Ontario-junk-car-removal-bmw-x5-side.jpeg" alt="BMW X5 junk vehicle removal by CanaDrive">
+            <span>BMW X5 removal</span>
+          </div>
 
-            <div class="cta-row" style="margin-top:14px;">
-              <a class="btn call" href="tel:+16472226661"><i class="fa-solid fa-phone"></i> Call to schedule</a>
-              <a class="btn whatsapp" href="https://wa.me/16472226661"><i class="fa-brands fa-whatsapp"></i> WhatsApp to schedule</a>
-            </div>
-
-            <div class="micro">
-              Estimates are based on vehicle condition and recoverable material/parts value.
-            </div>
+          <div class="gallery-img col-4">
+            <img src="vehicle-removal-bobcaygeon-canadrive.jpeg" alt="Ford Flex vehicle removal by CanaDrive">
+            <span>Ford Flex pickup</span>
           </div>
         </div>
       </div>
@@ -658,51 +727,40 @@ box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     <section id="areas">
       <div class="wrap">
         <div class="head">
-          <div>
-            <h2>Areas we serve</h2>
-            <p class="sub">
-              We help vehicle owners across the Greater Toronto Area, including Richmond Hill, Markham, Vaughan, North York, Toronto, and surrounding communities.
-              If you’re searching for “junk car removal near me” or “scrap car pickup near me,” contact CanaDrive for a fast evaluation and pickup scheduling.
-              <br><br>
-              Looking for service in Georgina? <a href="junk-car-removal-georgina.html">Junk Car Removal Georgina</a>
-              <br>
-              Also serving Newmarket/Aurora/East Gwillimbury/Queensville: <a href="junk-car-removal-newmarket.html">Junk Car Removal Newmarket</a>
-              <br>
-              Richmond Hill service: <a href="junk-car-removal-richmond-hill.html">Junk Car Removal Richmond Hill</a>
-              <br>
-              Vaughan area: <a href="junk-car-removal-vaughan.html">Junk Car Removal Vaughan</a>
-              <br>
-              Uxbridge / Port Perry region: <a href="junk-car-removal-uxbridge-port-perry.html">Junk Car Removal Uxbridge & Port Perry</a>
-              <br>
-              Durham Region (Pickering/Ajax/Whitby/Oshawa): <a href="junk-car-removal-durham-region.html">Junk Car Removal Durham Region</a>
-            </p>
-          </div>
+          <h2>Areas we serve</h2>
+          <p class="sub">
+            CanaDrive serves the GTA and surrounding communities, including Richmond Hill, Markham, Vaughan, North York, Toronto, Newmarket, Aurora, Georgina, Durham Region and nearby areas.
+          </p>
         </div>
 
         <div class="grid">
           <div class="card col-6">
-            <h3 style="margin:0 0 8px;">Quick message template</h3>
-            <p class="sub">Copy/paste into WhatsApp for the fastest quote:</p>
-            <div class="card" style="background:#f3faff; box-shadow:none;">
-              <code style="color:#102033; font-weight:800;">
-                Year/Make/Model: ____<br>
-                Condition (running/not): ____<br>
-                Damage/missing parts: ____<br>
-                Location: ____<br>
-                VIN (if available): ____
-              </code>
-            </div>
+            <h3>Local service pages</h3>
+            <ul>
+              <li><a href="junk-car-removal-georgina.html">Junk Car Removal Georgina</a></li>
+              <li><a href="junk-car-removal-newmarket.html">Junk Car Removal Newmarket</a></li>
+              <li><a href="junk-car-removal-richmond-hill.html">Junk Car Removal Richmond Hill</a></li>
+              <li><a href="junk-car-removal-vaughan.html">Junk Car Removal Vaughan</a></li>
+              <li><a href="junk-car-removal-uxbridge-port-perry.html">Junk Car Removal Uxbridge & Port Perry</a></li>
+              <li><a href="junk-car-removal-durham-region.html">Junk Car Removal Durham Region</a></li>
+            </ul>
           </div>
 
-          <div class="photo col-6" style="min-height:260px;">
-            <img
-              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=70"
-              alt="City skyline representing service area"
-              loading="lazy"
-            />
-            <div class="overlay">
-              <strong>GTA-focused</strong>
-              <span>Fast scheduling and clear communication for local pickup and removal.</span>
+          <div class="card col-6">
+            <h3>Fast WhatsApp template</h3>
+            <p class="sub">Copy and send:</p>
+            <div class="card" style="background:#f7fbff;box-shadow:none;margin-top:10px;">
+              <code>
+                Year/Make/Model: ____<br>
+                Running or not: ____<br>
+                Damage/missing parts: ____<br>
+                Location: ____<br>
+                Photos available: Yes/No
+              </code>
+            </div>
+
+            <div class="cta-row">
+              <a class="btn whatsapp" href="https://wa.me/16472226661"><i class="fa-brands fa-whatsapp"></i> Send on WhatsApp</a>
             </div>
           </div>
         </div>
@@ -711,54 +769,61 @@ box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 
     <section id="seo-area">
       <div class="wrap">
-        <div class="card seo">
+        <div class="card">
           <h2>Junk Car Removal & Scrap Vehicle Pickup in the GTA</h2>
 
-          <p class="sub" style="margin-top:8px;">
-            CanaDrive provides <b>junk car removal</b>, <b>scrap car removal</b> and <b>unwanted vehicle pickup</b> services throughout the Greater Toronto Area.
-            Many customers contact us when they need to get rid of an old car quickly, remove a non-running vehicle, or clear driveway space.
-            We help schedule removal and provide an <b>instant value estimate</b> based on the vehicle’s condition and recoverable material value.
+          <p class="sub">
+            CanaDrive provides junk car removal, scrap car removal and unwanted vehicle pickup services throughout the Greater Toronto Area.
+            Many customers contact us when they need to remove a non-running vehicle, clear driveway space, remove an accident vehicle or get rid of a car that is no longer worth repairing.
           </p>
 
           <p class="sub" style="margin-top:10px;">
-            We commonly assist with <b>damaged cars</b>, <b>accident vehicles</b>, <b>high-mileage vehicles</b>, <b>end-of-life vehicles</b>,
-            and cars that are no longer worth repairing. Whether the engine is blown, the transmission has failed, the car won’t start,
-            or the vehicle has been sitting unused, our team helps coordinate a smooth removal.
+            We commonly assist with damaged cars, high-mileage vehicles, end-of-life vehicles, cars with engine or transmission failure and vehicles that have been sitting unused.
           </p>
 
-          <h3>Common reasons people contact us</h3>
-          <ul>
-            <li>Non-running car removal</li>
-            <li>Scrap car pickup</li>
-            <li>Unwanted car removal</li>
-            <li>Damaged or accident vehicle removal</li>
-            <li>End-of-life vehicle recycling</li>
-            <li>Instant junk car quote and value estimate</li>
-            <li>Old vehicle taking up parking space</li>
-            <li>Abandoned or unused vehicle removal</li>
-          </ul>
-
-          <h3>Local “near me” searches</h3>
-          <p class="sub" id="near-me">
-            We help vehicle owners in <b>Richmond Hill</b>, <b>Markham</b>, <b>Vaughan</b>, <b>North York</b>, <b>Toronto</b> and surrounding GTA communities.
-            If you are searching for “<b>junk car removal near me</b>” or “<b>scrap car pickup near me</b>,” contact CanaDrive to arrange a convenient pickup time and quick evaluation.
-          </p>
-
-          <div class="pillrow" aria-label="Keyword tags">
+          <div class="pillrow">
             <span class="pilltag">junk car removal</span>
-            <span class="pilltag">scrap car removal</span>
-            <span class="pilltag">unwanted car pickup</span>
-            <span class="pilltag">end-of-life vehicle</span>
+            <span class="pilltag">scrap car pickup</span>
+            <span class="pilltag">unwanted car removal</span>
+            <span class="pilltag">damaged vehicle removal</span>
             <span class="pilltag">non-running car removal</span>
-            <span class="pilltag">damaged car removal</span>
-            <span class="pilltag">junk car quote</span>
-            <span class="pilltag">scrap car pickup near me</span>
+            <span class="pilltag">end-of-life vehicle</span>
+            <span class="pilltag">GTA vehicle pickup</span>
+            <span class="pilltag">scrap car quote</span>
           </div>
 
-          <div class="cta-row" style="margin-top:16px;">
-            <a class="btn call" href="tel:+16472226661"><i class="fa-solid fa-phone"></i> Call for instant estimate</a>
-            <a class="btn whatsapp" href="https://wa.me/16472226661"><i class="fa-brands fa-whatsapp"></i> WhatsApp for fast reply</a>
-            <a class="btn ghost" href="#contact">Contact options</a>
+          <div class="cta-row">
+            <a class="btn call" href="tel:+16472226661"><i class="fa-solid fa-phone"></i> Call for estimate</a>
+            <a class="btn whatsapp" href="https://wa.me/16472226661"><i class="fa-brands fa-whatsapp"></i> WhatsApp now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="wrap">
+        <div class="head">
+          <h2>What customers appreciate</h2>
+          <p class="sub">Professional pickup, clear communication and a smooth process.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card col-4">
+            <h3>★★★★★</h3>
+            <p class="sub">Fast pickup and exactly as promised. Very professional.</p>
+            <p><b>Markham Customer</b></p>
+          </div>
+
+          <div class="card col-4">
+            <h3>★★★★★</h3>
+            <p class="sub">Easy process and excellent communication from start to finish.</p>
+            <p><b>Ajax Customer</b></p>
+          </div>
+
+          <div class="card col-4">
+            <h3>★★★★★</h3>
+            <p class="sub">Removed our vehicle quickly and smoothly.</p>
+            <p><b>Oshawa Customer</b></p>
           </div>
         </div>
       </div>
@@ -767,31 +832,29 @@ box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     <section id="faq">
       <div class="wrap">
         <div class="head">
-          <div>
-            <h2>FAQ</h2>
-            <p class="sub">Fast answers to common questions before booking pickup.</p>
-          </div>
+          <h2>FAQ</h2>
+          <p class="sub">Common questions before booking pickup.</p>
         </div>
 
         <div class="faq">
           <details>
-            <summary>How do you evaluate my vehicle instantly on the phone?</summary>
-            <p>We use your year/make/model, condition (running or not), visible damage, missing parts, and location to provide a quick estimate based on recoverable material/parts value. Photos can make it even faster.</p>
+            <summary>How do you evaluate my vehicle?</summary>
+            <p>We use the year, make, model, condition, missing parts, damage, location and photos to provide a fast estimate based on recoverable material and parts value.</p>
           </details>
 
           <details>
             <summary>Do you remove non-running or damaged vehicles?</summary>
-            <p>Yes. Non-running, damaged, accident vehicles, and end-of-life vehicles are common. Tell us what’s going on and we’ll guide the smoothest option.</p>
+            <p>Yes. Non-running, damaged, accident, high-mileage and end-of-life vehicles are common.</p>
           </details>
 
           <details>
-            <summary>What information should I have ready?</summary>
-            <p>Year/make/model, location, and a quick description of condition. VIN is helpful (if available) but not always required for an estimate.</p>
+            <summary>What information should I send?</summary>
+            <p>Send the year, make, model, location, whether it runs, any missing parts, damage details and photos if available.</p>
           </details>
 
           <details>
             <summary>How fast can pickup happen?</summary>
-            <p>It depends on location and scheduling availability, but our goal is quick scheduling with clear communication.</p>
+            <p>Pickup depends on location and scheduling availability, but we aim to keep the process fast and clear.</p>
           </details>
         </div>
       </div>
@@ -800,54 +863,61 @@ box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     <section id="contact">
       <div class="wrap">
         <div class="head">
-          <div>
-            <h2>Contact CanaDrive</h2>
-            <p class="sub">Fastest response is by phone or WhatsApp for an instant evaluation.</p>
-          </div>
+          <h2>Contact CanaDrive</h2>
+          <p class="sub">Fastest response is by phone or WhatsApp.</p>
         </div>
 
         <div class="grid">
           <div class="card col-6">
-            <h3 style="margin:0 0 8px;">Call / WhatsApp</h3>
-            <p class="sub" style="margin-bottom:14px;">
-              Tell us the vehicle details and location — we’ll evaluate instantly and help you schedule a smooth pickup.
-            </p>
+            <h3>Call / WhatsApp</h3>
+            <p class="sub">Tell us the vehicle details and location. We will evaluate quickly and help arrange pickup.</p>
+
             <div class="cta-row">
               <a class="btn call" href="tel:+16472226661"><i class="fa-solid fa-phone"></i> 647-222-6661</a>
               <a class="btn whatsapp" href="https://wa.me/16472226661"><i class="fa-brands fa-whatsapp"></i> WhatsApp message</a>
             </div>
-            <div class="micro">You can message: “Year / Make / Model + Running/Not + Address.”</div>
           </div>
 
           <div class="card col-6">
-            <h3 style="margin:0 0 8px;">Email</h3>
-            <p class="sub" style="margin-bottom:14px;">Prefer email? Send the vehicle details and a short description.</p>
-            <a class="btn ghost" href="mailto:info@canadrive.co">info@canadrive.co</a>
-            <div class="micro">We reply faster by phone/WhatsApp.</div>
+            <h3>Email</h3>
+            <p class="sub">Prefer email? Send vehicle details and a short description.</p>
+
+            <div class="cta-row">
+              <a class="btn ghost" href="mailto:info@canadrive.co"><i class="fa-solid fa-envelope"></i> info@canadrive.co</a>
+            </div>
+
+            <div class="micro">Phone or WhatsApp is usually faster.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer>
-      <div class="wrap footgrid">
-        <div>
-          <b>CanaDrive Autos and Parts Inc.</b><br />
-          <span class="small">Unwanted vehicle removal • Recycling-focused outcomes</span>
-          <div class="small" style="margin-top:8px;">
-            Phone: <a href="tel:+16472226661">647-222-6661</a> • WhatsApp: <a href="https://wa.me/16472226661">647-222-6661</a> • Website: www.canadrive.co
-          </div>
-        </div>
-        <div class="small">
-          This website describes vehicle removal and recycling-oriented services and does not offer retail motor vehicles for sale to the public.
-          Estimates are based on vehicle condition and recoverable material/parts value.
-        </div>
-      </div>
-      <div class="wrap small" style="margin-top:14px;">© 2026 CanaDrive Autos and Parts Inc. All rights reserved.</div>
-    </footer>
   </main>
 
-  <div class="mobile-callbar" aria-label="Quick contact bar">
+  <footer>
+    <div class="wrap footgrid">
+      <div>
+        <b>CanaDrive Autos and Parts Inc.</b><br>
+        <span class="small">Unwanted vehicle removal • Recycling-focused outcomes</span>
+        <div class="small" style="margin-top:8px;">
+          Phone: <a href="tel:+16472226661">647-222-6661</a> •
+          WhatsApp: <a href="https://wa.me/16472226661">647-222-6661</a> •
+          Website: www.canadrive.co
+        </div>
+      </div>
+
+      <div class="small">
+        This website describes vehicle removal and recycling-oriented services and does not offer retail motor vehicles for sale to the public.
+        Estimates are based on vehicle condition and recoverable material/parts value.
+      </div>
+    </div>
+
+    <div class="wrap small" style="margin-top:14px;">
+      © 2026 CanaDrive Autos and Parts Inc. All rights reserved.
+    </div>
+  </footer>
+
+  <div class="mobile-callbar">
     <a class="mcb-call" href="tel:+16472226661"><i class="fa-solid fa-phone"></i> Call</a>
     <a class="mcb-wa" href="https://wa.me/16472226661"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
   </div>
