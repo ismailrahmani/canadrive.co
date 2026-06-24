@@ -123,22 +123,22 @@
 }
 
 .brandline{
-  display:grid;
-  grid-template-columns:70px 1fr;
+  position:relative;
+  display:flex;
+  justify-content:center;
   align-items:center;
   width:100%;
+  min-height:90px;
 }
 
 .brand-logo{
-  height:60px !important;
-  width:60px !important;
-  min-width:60px;
-  max-width:60px;
+  position:absolute;
+  left:10px;
+
+  height:90px;
+  width:90px;
 
   object-fit:contain;
-  display:block;
-
-  margin-left:0;
 
   border-radius:0;
   background:transparent;
@@ -150,6 +150,7 @@
   font-size:27px;
   line-height:1.05;
   font-weight:700;
+  text-align:center;
 
   background:
   linear-gradient(
