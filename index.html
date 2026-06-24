@@ -655,6 +655,43 @@
   text-align:center !important;
   width:100% !important;
 }
+    /* LOGO LEFT + COMPANY NAME CENTER FIX */
+
+.brandline{
+  position:relative !important;
+  width:100% !important;
+  min-height:95px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+.brand-logo{
+  position:absolute !important;
+  left:0 !important;
+  top:50% !important;
+  transform:translateY(-50%) !important;
+
+  height:95px !important;
+  width:95px !important;
+  max-height:95px !important;
+  max-width:95px !important;
+
+  object-fit:contain !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  border-radius:0 !important;
+}
+
+.brand-title{
+  width:100% !important;
+  text-align:center !important;
+}
+
+.brand-tagline{
+  width:100% !important;
+  text-align:center !important;
+}
   </style>
 </head>
 
@@ -663,7 +700,7 @@
   <div class="topbar">
     <div class="wrap row">
       <div class="brandline">
-        <img src="New Logo.PNG" alt="CanaDrive Autos and Parts Inc. logo">
+        <img class="brand-logo" src="New Logo.PNG" alt="CanaDrive Autos and Parts Inc. logo">
         <div>
           <div class="brand-title">CanaDrive Autos and Parts Inc.</div>
           <div class="brand-tagline">Junk • Scrap • Unwanted Vehicle Removal</div>
